@@ -68,6 +68,34 @@ RuTube:     https://rutube.ru/channel/8968994
 15. При создании или удалении страницы — обновлять `sitemap.xml` (добавлять/убирать URL).
 16. Страницы с описанием парсеров — ключевые для индексации.
 
+## Аналитика (Яндекс Метрика)
+
+17. На **каждой** странице сайта должен быть код счётчика Яндекс Метрики (ID `111697118`). Он вставляется в `<head>` сразу после `<meta name="viewport">` — как можно ближе к началу страницы.
+18. Уже подключённые места:
+    - статические страницы: `index.html`, `videos.html`, `rate.html`, `pay.html`, `404.html` — вставлен вручную;
+    - страницы парсеров `parsers/*.html` — вставляется через `build/template_parser.html`;
+    - каталог `parsers.html` — вставляется через `generate_catalog_page` в `build/generate.py` (константа `YANDEX_METRIKA`).
+19. При создании **новой** страницы — обязательно добавлять код счётчика в её `<head>` (вручную или через шаблон).
+20. Файл верификации `yandex_3b77755ac8d47a10.html` не удалять и не изменять.
+
+Код счётчика (использовать везде одинаково):
+
+```
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+    ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+```
+
 ## Страницы парсеров (генерация)
 
 Страницы парсеров генерируются автоматически из Python-файлов приложения.

@@ -51,6 +51,21 @@ SKIP_FILES = {"__init__.py", "base_parser.py"}
 # Шаблоны
 TEMPLATE_PARSER = os.path.join(BUILD_DIR, "template_parser.html")
 
+# Код счётчика Яндекс Метрики (вставляется в <head> каталога parsers.html)
+YANDEX_METRIKA = """<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->"""
+
 
 # ============================================================
 # ИЗВЛЕЧЕНИЕ МЕТАДАННЫХ ИЗ .py ФАЙЛОВ
@@ -524,6 +539,7 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {YANDEX_METRIKA}
     <title>Парсеры - Анализ смет</title>
     <meta name="description" content="Каталог парсеров приложения Анализ смет. Все доступные парсеры для анализа файлов ГРАНД-Смета (.gsfx).">
 

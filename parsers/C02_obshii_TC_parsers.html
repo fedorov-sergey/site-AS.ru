@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
     <title>╚ ТЦ - Анализ смет</title>
     <meta name="description" content="Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ЦЕН» и выводит полный список элементов ценника с атрибутами, разделами и трудозатратами машинистов.">
 
@@ -85,7 +100,7 @@
     <section class="page-header text-center">
         <div class="container">
             <h1 class="display-5 fw-bold mb-3">╚ ТЦ</h1>
-            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">04. Ценник/Ц02 ╚ ТЦ</a></p>
+            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">04. Ценник/1. Цены/Ц02 ╚ ТЦ</a></p>
         </div>
     </section>
 
@@ -96,7 +111,7 @@
             <!-- Описание -->
             <div class="mb-4">
                 <h5 class="mb-3"><i class="bi bi-info-circle text-primary"></i> Описание</h5>
-                <p class="text-muted">Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ЦЕН» и выводит полный список элементов ценника с атрибутами, разделами и трудозатратами машинистов.</p>
+                <p class="text-muted">Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ЦЕН» и выводит полный список элементов ценника с атрибутами, разделами и трудозатратами машинистов. Скрыты дополнительно лишние столбцы.</p>
             </div>
 
             <!-- Скриншот (заглушка) -->
@@ -122,16 +137,36 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td class="fw-bold col-name">Группа</td>
+                                <td class="col-desc">Группа:<br><b>• ЗТР</b> - Затраты труда рабочих<br><b>• ЗТМ</b> - Затраты труда машинистов<br>• <b>М</b> - Материалы<br>• <b>МиМ</b> - Машины и механизмы</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Разд</td>
+                                <td class="col-desc">Наименование раздела</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">РаздП</td>
+                                <td class="col-desc">Примечание раздела</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">РаздГ</td>
+                                <td class="col-desc">Гиперссылка раздела</td>
+                            </tr>
+                            <tr>
                                 <td class="fw-bold col-name">Код</td>
-                                <td class="col-desc">Код элемента</td>
+                                <td class="col-desc">Код</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Наименование</td>
-                                <td class="col-desc">Наименование элемента</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">ЕИ</td>
                                 <td class="col-desc">Ед.изм.</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Крат</td>
+                                <td class="col-desc">К-т кратности изм.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с коэффициентом кратности измерителя».</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Брутто</td>
@@ -146,20 +181,28 @@
                                 <td class="col-desc">Разряд работы</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold col-name">ТЦ сметная</td>
-                                <td class="col-desc">Стоимость в текущих ценах Сметная</td>
+                                <td class="fw-bold col-name">ТЗМ КолВо</td>
+                                <td class="col-desc">Трудозатраты машинистов: Кол-во, чел.-ч.<br>Отображается при активации параметра во вкладке «Документ» → «Параметры» → «Общие» → «Отображать данные о трудозатратах машинистов».</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold col-name">ТЦ оптовая</td>
-                                <td class="col-desc">Стоимость в текущих ценах Оптовая</td>
+                                <td class="fw-bold col-name">ТЗМ цена</td>
+                                <td class="col-desc">Трудозатраты машинистов: Сметная цена, руб.<br>Отображается при активации параметра во вкладке «Документ» → «Параметры» → «Общие» → «Отображать данные о трудозатратах машинистов».</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold col-name">БЦ сметная</td>
-                                <td class="col-desc">Стоимость в базисных ценах Сметная</td>
+                                <td class="fw-bold col-name">ТЦсм</td>
+                                <td class="col-desc">Стоимость в текущих ценах: Сметная</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold col-name">БЦ оптовая</td>
-                                <td class="col-desc">Стоимость в базисных ценах Оптовая</td>
+                                <td class="fw-bold col-name">ТЦопт</td>
+                                <td class="col-desc">Стоимость в текущих ценах: Оптовая/ЗП</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">БЦсм</td>
+                                <td class="col-desc">Стоимость в базисных ценах: Сметная</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">БЦопт</td>
+                                <td class="col-desc">Стоимость в базисных ценах: Оптовая/ЗП</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">ОбоснБЦ</td>
@@ -170,6 +213,26 @@
                                 <td class="col-desc">Обосн. тек.цены</td>
                             </tr>
                             <tr>
+                                <td class="fw-bold col-name">ОтрШифр</td>
+                                <td class="col-desc">Отраслевой шифр.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с отраслевым шифром».</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">АльтШифр</td>
+                                <td class="col-desc">Альтернативный шифр.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с альтернативным шифром».</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">ШифрГр</td>
+                                <td class="col-desc">Шифр группы.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с шифром группы».</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">ОКПД2</td>
+                                <td class="col-desc">ОКПД2.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с ОКПД2».</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">КодГОР</td>
+                                <td class="col-desc">Код группы однородных ресурсов.<br>Отображается при активации параметра в «Файл» → «Установки» → «Ценник» → «Отображать колонку с кодом группы однородных ресурсов».</td>
+                            </tr>
+                            <tr>
                                 <td class="fw-bold col-name">Примечания</td>
                                 <td class="col-desc">Примечания</td>
                             </tr>
@@ -177,35 +240,11 @@
                                 <td class="fw-bold col-name">Гиперссылка</td>
                                 <td class="col-desc">Гиперссылка</td>
                             </tr>
-                            <tr>
-                                <td class="fw-bold col-name">Раздел</td>
-                                <td class="col-desc">Наименование раздела</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold col-name">РазделП</td>
-                                <td class="col-desc">Примечание раздела</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold col-name">РазделГ</td>
-                                <td class="col-desc">Гиперссылка раздела</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold col-name">Группа</td>
-                                <td class="col-desc">Группы: Затраты труда рабочих, Затраты труда машинистов, Материалы, Машины и механизмы</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold col-name">ТЗМ КолВо</td>
-                                <td class="col-desc">Трудозатраты машинистов Кол-во, чел.-ч.</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold col-name">ТЗМ цена</td>
-                                <td class="col-desc">Трудозатраты машинистов Сметная цена, руб.</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <p class="text-muted small mt-2 mb-0">
-                    <i class="bi bi-info-circle"></i> Всего столбцов: 20
+                    <i class="bi bi-info-circle"></i> Всего столбцов: 26
                 </p>
             </div>
 
@@ -219,6 +258,12 @@
                 <a href="../index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="../legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="../legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>

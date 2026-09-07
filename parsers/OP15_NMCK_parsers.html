@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
+    <title>НМЦК - Анализ смет</title>
+    <meta name="description" content="Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ОС» и выводит данные из вкладки «Документ» → «Параметры» → «НМЦК» (Расчет начальной (максимальной) ">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 60px 0 40px;
+        }
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+        }
+        .navbar-brand {
+            font-size: 1.3rem !important;
+            letter-spacing: 1.5px;
+        }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-uppercase" href="../index.html">
+                <i class="bi bi-bar-chart-fill"></i> Анализ смет
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end offcanvas-lg bg-dark" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title text-white text-uppercase">Меню</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMenu"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../parsers.html">Парсеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../videos.html">Помощь</a>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
+                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="../rate.html">
+                                Тарифы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ЗАГОЛОВОК -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">НМЦК</h1>
+            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">02. Объектная смета/2. Параметры/ОП15 НМЦК</a></p>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <section class="py-5">
+        <div class="container" style="max-width: 900px;">
+
+            <!-- Описание -->
+            <div class="mb-4">
+                <h5 class="mb-3"><i class="bi bi-info-circle text-primary"></i> Описание</h5>
+                <p class="text-muted">Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ОС» и выводит данные из вкладки «Документ» → «Параметры» → «НМЦК» (Расчет начальной (максимальной) цены контракта).</p>
+            </div>
+
+            <!-- Скриншот -->
+            <div class="mb-4">
+                <h5 class="mb-3"><i class="bi bi-image text-primary"></i> Скриншот</h5>
+                <div class="text-center">
+                    <img src="pic/Q15.PNG" alt="ОП15 НМЦК" class="img-fluid shadow-sm" style="max-height: 600px;">
+                </div>
+            </div>
+
+
+            <!-- Таблица столбцов -->
+            <div class="mb-4">
+                <h5 class="mb-3"><i class="bi bi-table text-primary"></i> Столбцы парсера</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-0">
+                        <thead class="table-primary">
+                            <tr>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold col-name">Метод</td>
+                                <td class="col-desc">Используемая методика расчета</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">ИсклИнд</td>
+                                <td class="col-desc">Используемая методика расчета: Расчет индекса прогнозной инфляции на первый год строительства/проектирования: Исключать индекс фактической инфляции<br>• <b>(пусто)</b> - если "Метод" не равен "Приказ 841/пр от 23.12.2019"</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Окр</td>
+                                <td class="col-desc">Параметры расчета: Округлять расчитанную стоимость до рублей<br><b>▣/□</b></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">УрЦен</td>
+                                <td class="col-desc">Параметры расчета: Уровень цен утвержденной сметной документации</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">ОкрИнд</td>
+                                <td class="col-desc">Параметры расчета: Округление рассчитанного значения индекса</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">НДС</td>
+                                <td class="col-desc">Параметры расчета: Ставка НДС по умолчанию</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Формат</td>
+                                <td class="col-desc">Формат вывода уровня текущих цен на печать, в Excel и в ГГЭ</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Регион</td>
+                                <td class="col-desc">Объект административно-территориального деления для автоматической загрузки индексов: Регион</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold col-name">Возвр</td>
+                                <td class="col-desc">Объект административно-территориального деления для автоматической загрузки индексов: ОКТАО</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-muted small mt-2 mb-0">
+                    <i class="bi bi-info-circle"></i> Всего столбцов: 9
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-2">
+                <a href="../index.html" class="text-white-50 text-decoration-none">
+                    <i class="bi bi-arrow-left"></i> На главную
+                </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="../legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="../legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
+            </p>
+            <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

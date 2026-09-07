@@ -16,6 +16,22 @@
 9. Все стили — в `<style>` внутри `<head>` конкретной страницы. Глобальный CSS-файл не используется.
 10. Подход к верстке — **блочный** (как в Тильде): каждая секция страницы — это отдельный `<section>` с собственным фоном/отступом. Это обеспечивает визуальную целостность и адаптивность.
 
+## Фавиконка
+
+Фавиконка должна быть на **каждой** странице сайта. Используются файлы `icon.png` (приоритет — указывать первым) и `icon.ico` в корне сайта.
+
+Код (одинаковый везде, вставляется в `<head>` сразу после кода счётчика Метрики, перед `<title>`):
+
+```
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="icon" type="image/x-icon" href="icon.ico">
+```
+
+- В корневых страницах (`index.html`, `videos.html`, `parsers.html`, `rate.html`, `pay.html`, `404.html`) — путь `icon.png` / `icon.ico`.
+- В подпапке `parsers/*.html` — относительный путь `../icon.png` / `../icon.ico`.
+- Для страниц парсеров фавиконка вставлена через `build/template_parser.html`, для каталога `parsers.html` — через `generate_catalog_page` в `build/generate.py`.
+- При создании **новой** страницы — обязательно добавлять фавиконку в её `<head>`.
+
 ## Структура каждой страницы (каркас)
 
 Каждая новая страница должна повторять этот каркас:
@@ -55,18 +71,74 @@
 ```
 Telegram:   https://t.me/pznrsp
 ВКонтакте:  https://vk.com/pznrsp
-Макс:       https://max.buzz/i/pznrsp
+MAX:        https://max.ru/channel_analizsmet
 YouTube:    https://www.youtube.com/@pznrsp
 ВК Видео:   https://vkvideo.ru/@pznrsp
 Дзен:       https://dzen.ru/pznrsp
 RuTube:     https://rutube.ru/channel/8968994
 ```
 
+## Блок «Напишите разработчику»
+
+Блок с тремя кнопками, отображается на страницах `rate.html`, `pay.html`, `error.html` или других. Кнопки — **ВК**, **TG**, **MAX** (порядок именно такой).
+
+Ссылки (внутренние, для связи с разработчиком — НЕ совпадают со ссылками соцсетей выше):
+
+```
+ВК:     https://vk.ru/fedorov_jr
+TG:     https://t.me/fedorov_jr
+MAX:    https://max.ru/u/f9LHodD0cOLlpPKGoBu8A6OrkYpVY8PBkFTfiy13grGgop0LayfDi5dEfvU
+```
+
+Иконки: `bi-chat-dots-fill` (ВК), `bi-telegram` (TG), `bi-chat-fill` (MAX).
+
 ## SEO
 
 14. У каждой страницы должны быть заполнены `<title>` и `<meta name="description">`.
 15. При создании или удалении страницы — обновлять `sitemap.xml` (добавлять/убирать URL).
 16. Страницы с описанием парсеров — ключевые для индексации.
+17. В корне сайта лежит файл `robots.txt`. Он закрывает от индексации служебную папку `build/` и указывает на `sitemap.xml`:
+    ```
+    User-agent: Yandex
+    Disallow: /build/
+
+    User-agent: Googlebot
+    Disallow: /build/
+
+    User-agent: *
+    Disallow: /build/
+
+    Sitemap: https://analizsmet.ru/sitemap.xml
+    ```
+18. При создании в проекте новых папок или файлов — **всегда задумываться о `robots.txt`**: если папка/файл служебные и не должны попадать в поиск, добавить правило `Disallow` в `robots.txt`.
+
+## Аналитика (Яндекс Метрика)
+
+19. На **каждой** странице сайта должен быть код счётчика Яндекс Метрики (ID `111697118`). Он вставляется в `<head>` сразу после `<meta name="viewport">` — как можно ближе к началу страницы.
+20. Уже подключённые места:
+    - статические страницы: `index.html`, `videos.html`, `rate.html`, `pay.html`, `404.html` — вставлен вручную;
+    - страницы парсеров `parsers/*.html` — вставляется через `build/template_parser.html`;
+    - каталог `parsers.html` — вставляется через `generate_catalog_page` в `build/generate.py` (константа `YANDEX_METRIKA`).
+21. При создании **новой** страницы — обязательно добавлять код счётчика в её `<head>` (вручную или через шаблон).
+22. Файл верификации `yandex_3b77755ac8d47a10.html` не удалять и не изменять.
+
+Код счётчика (использовать везде одинаково):
+
+```
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+    ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+```
 
 ## Страницы парсеров (генерация)
 
@@ -111,6 +183,29 @@ python generate.py
 - Структура: каждый файл — 1 класс, наследует BaseParser
 - Атрибуты: NAME, DESCRIPTION, PREMIUM, PIC, PATH, COLUMNS
 - slug страницы = имя .py файла без расширения (например `LP17_Koeff_parsers`)
+
+## Служебные страницы (папка `legal/`)
+
+23. Папка `legal/` — служебные документы, **не должны попадать в поиск**:
+    - `legal/privacy.html` — политика обработки персональных данных;
+    - `legal/cookie.html` — политика использования cookie-файлов;
+    - `legal/privacy.txt` и `legal/cookie.txt` — исходные тексты для этих страниц (при правках обновлять оба файла: txt и html).
+24. Папка `legal/` закрыта от индексации в `robots.txt` (`Disallow: /legal/`) и **не добавляется** в `sitemap.xml`.
+25. Пути на страницах `legal/*.html` — относительные: фавиконка `../icon.png`, ссылки навигации `../index.html` и т.д.
+26. Внутри `legal/*.html` текст должен отображаться согласно содержимому соответствующего `.txt` файла.
+
+## Футер (ссылки на legal-страницы)
+
+На **каждой** странице сайта в футере перед копирайтом обязателен блок со ссылками на политики:
+
+```
+Используя сайт, вы принимаете Политику конфиденциальности и Cookie-политику.
+```
+
+- Корневые страницы и `parsers.html` (футер из `generate_catalog_page` в `build/generate.py`): ссылки `legal/privacy.html`, `legal/cookie.html`.
+- Страницы парсеров `parsers/*.html` (из `build/template_parser.html`): ссылки `../legal/privacy.html`, `../legal/cookie.html`.
+- Страницы `legal/*.html`: взаимные ссылки внутри папки — просто `privacy.html`, `cookie.html`.
+- Классы ссылок: `text-white-50 text-decoration-none`, обрамляющий блок — `<p class="mb-2 small text-white-50">`.
 
 ## Приложение (справочная информация для контента)
 

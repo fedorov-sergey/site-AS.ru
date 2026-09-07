@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
     <title>╠ Баз. метод - Анализ смет</title>
     <meta name="description" content="Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ЛС» и выводит данные из вкладки «Документ» → «Параметры» → «Баз. метод» (Параметры расчета базисным">
 
@@ -85,7 +100,7 @@
     <section class="page-header text-center">
         <div class="container">
             <h1 class="display-5 fw-bold mb-3">╠ Баз. метод</h1>
-            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">01. ЛС/2. Параметры/ЛП09 ╠ Баз. метод</a></p>
+            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">01. Локальная смета/2. Параметры/ЛП09 ╠ Баз. метод</a></p>
         </div>
     </section>
 
@@ -103,7 +118,7 @@
             <div class="mb-4">
                 <h5 class="mb-3"><i class="bi bi-image text-primary"></i> Скриншот</h5>
                 <div class="text-center">
-                    <img src="pic/9.PNG" alt="ЛП09 ╠ Баз. метод" class="img-fluid shadow-sm" style="max-height: 600px;">
+                    <img src="pic/L9.PNG" alt="ЛП09 ╠ Баз. метод" class="img-fluid shadow-sm" style="max-height: 600px;">
                 </div>
             </div>
 
@@ -122,15 +137,15 @@
                         <tbody>
                             <tr>
                                 <td class="fw-bold col-name">УрЦен</td>
-                                <td class="col-desc">Основной уровень цен для расчета в базисных ценах<br>• <b>Цены 2001г.</b><br>• <b>Цены 1984г.</b></td>
+                                <td class="col-desc">Основной уровень цен для расчета в базисных ценах:<br>• <b>Цены 2001г.</b><br>• <b>Цены 1984г.</b></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">ВидРаб</td>
-                                <td class="col-desc">Вид работ для расчета НР и СП при расчете в базисных ценах<br>• <b>Виды работ 2001г.</b><br>• <b>Виды работ 1984г.</b><br>• <b>Не активно</b> - если "УрЦен"="Цены 2001г."</td>
+                                <td class="col-desc">Вид работ для расчета НР и СП при расчете в базисных ценах:<br>• <b>Виды работ 2001г.</b><br>• <b>Виды работ 1984г.</b><br>• <b>Не активно</b> - если "УрЦен"="Цены 2001г."</td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">СтоимостьЕд</td>
-                                <td class="col-desc">Способ формирования стоимости единицы позиций при расчете в базисных ценах<br>• <b>Стандартный расчет в соответствии с заданной ценой</b><br>• <b>Ресурсный расчет при отсутствии базисной цены (ГЭСН и т.п.)</b><br>• <b>Ресурсный расчет для всех позиций</b></td>
+                                <td class="col-desc">Способ формирования стоимости единицы позиций при расчете в базисных ценах:<br>• <b>Стандартный расчет в соответствии с заданной ценой</b><br>• <b>Ресурсный расчет при отсутствии базисной цены (ГЭСН и т.п.)</b><br>• <b>Ресурсный расчет для всех позиций</b></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">СтоимостьОбщ</td>
@@ -138,7 +153,7 @@
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">НеучДоб</td>
-                                <td class="col-desc">Неучтенные и добавленные материалы отдельно учитывать в общей стоимости позиций<br><b>▣/□</b></td>
+                                <td class="col-desc">Неучтенные и добавленные материалы отдельно учитывать в общей стоимости позиций:<br><b>▣/□</b></td>
                             </tr>
                         </tbody>
                     </table>
@@ -158,6 +173,12 @@
                 <a href="../index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="../legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="../legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>

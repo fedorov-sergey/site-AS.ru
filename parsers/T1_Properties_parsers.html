@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
     <title>Properties.txt - Анализ смет</title>
     <meta name="description" content="Парсер извлекает информацию из файла Properties.txt внутри архивов ГРАНД-Смета (*.gsfx) и выводит технические свойства документа.">
 
@@ -122,7 +137,7 @@
                         <tbody>
                             <tr>
                                 <td class="fw-bold col-name">Вид</td>
-                                <td class="col-desc">DocType (Вид сметы)<br>• <b>sdtSmeta</b> — Локальная смета<br>• <b>sdtObjSmeta</b> — Объектная смета<br>• <b>sdtConsCalc</b> — Сводный сметный расчет<br>• <b>sdtProjectSmeta</b> — Проектная смета<br>• <b>sdtContractSmeta</b> — Смета контракта<br>• <b>sdtDocSummary</b> — Сводка затрат<br>• <b>sdtIndexes</b> — Сборник индексов<br>• <b>sdtUserNBDoc</b> — Сборник расценок<br>• <b>sdtCennik</b> — Ценник<br>• <b>sdtResSummary</b> — Ресурсная ведомость<br>• <b>sdtMarketAnalysis</b> — Конъюктурный анализ<br>• <b>sdtTranspCalc</b> — Транспортная калькуляция<br>• <b>sdtWorksVolumes</b> — Ведомость объемов работ</td>
+                                <td class="col-desc">DocType (Вид сметы)<br>• <b>sdtSmeta</b> — Локальная смета<br>• <b>sdtObjSmeta</b> — Объектная смета<br>• <b>sdtConsCalc</b> — Сводный сметный расчет<br>• <b>sdtProjectSmeta</b> — Проектная смета<br>• <b>sdtContractSmeta</b> — Смета контракта<br>• <b>sdtDocSummary</b> — Сводка затрат<br>• <b>sdtIndexes</b> — Сборник индексов<br>• <b>sdtUserNBDoc</b> — Сборник расценок<br>• <b>sdtCennik</b> — Ценник<br>• <b>sdtResSummary</b> — Ресурсная ведомость<br>• <b>sdtMarketAnalysis</b> — Конъюктурный анализ<br>• <b>sdtTranspCalc</b> — Транспортная калькуляция<br>• <b>sdtWorksVolumes</b> — Ведомость объемов работ<br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Ревизия</td>
@@ -214,6 +229,12 @@
                 <a href="../index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="../legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="../legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>

@@ -1,0 +1,13 @@
+User-agent: Yandex
+Disallow: /build/
+Disallow: /legal/
+
+User-agent: Googlebot
+Disallow: /build/
+Disallow: /legal/
+
+User-agent: *
+Disallow: /build/
+Disallow: /legal/
+
+Sitemap: https://analizsmet.ru/sitemap.xml

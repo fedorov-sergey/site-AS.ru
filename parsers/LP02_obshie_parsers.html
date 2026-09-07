@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
     <title>╠ Общие - Анализ смет</title>
     <meta name="description" content="Парсер извлекает информацию из всех файлов ГРАНД-Смета вида «ЛС» и выводит данные из вкладки «Документ» → «Параметры» → «Общие» (Ощие настройки расчета).">
 
@@ -85,7 +100,7 @@
     <section class="page-header text-center">
         <div class="container">
             <h1 class="display-5 fw-bold mb-3">╠ Общие</h1>
-            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">01. ЛС/2. Параметры/ЛП02 ╠ Общие</a></p>
+            <p class="lead mb-0"><a href="../parsers.html" class="text-white text-decoration-none">01. Локальная смета/2. Параметры/ЛП02 ╠ Общие</a></p>
         </div>
     </section>
 
@@ -103,7 +118,7 @@
             <div class="mb-4">
                 <h5 class="mb-3"><i class="bi bi-image text-primary"></i> Скриншот</h5>
                 <div class="text-center">
-                    <img src="pic/2.PNG" alt="ЛП02 ╠ Общие" class="img-fluid shadow-sm" style="max-height: 600px;">
+                    <img src="pic/L2.PNG" alt="ЛП02 ╠ Общие" class="img-fluid shadow-sm" style="max-height: 600px;">
                 </div>
             </div>
 
@@ -122,23 +137,23 @@
                         <tbody>
                             <tr>
                                 <td class="fw-bold col-name">Расчет К</td>
-                                <td class="col-desc">Способ расчета коэффициентов к позиции<br>• <b>Уровневый</b><br>• <b>Перемножение коэффициентов</b><br></td>
+                                <td class="col-desc">Способ расчета коэффициентов к позиции:<br>• <b>Уровневый</b><br>• <b>Перемножение коэффициентов</b><br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Округление</td>
-                                <td class="col-desc">Округление произведения к-тов<br>• <b>Не активно</b> - если столбец "Расчет К"="Уровневый"<br>• <b>Выключено</b><br>• <b>1 знак после запятой</b><br>• <b>2 знака после запятой</b><br>• <b>3 знака после запятой</b><br>• <b>4 знака после запятой</b><br>• <b>5 знаков после запятой</b><br>• <b>6 знаков после запятой</b><br>• <b>7 знаков после запятой</b><br></td>
+                                <td class="col-desc">Округление произведения к-тов:<br>• <b>Не активно</b> - если столбец "Расчет К"="Уровневый"<br>• <b>Выключено</b><br>• <b>1 знак после запятой</b><br>• <b>2 знака после запятой</b><br>• <b>3 знака после запятой</b><br>• <b>4 знака после запятой</b><br>• <b>5 знаков после запятой</b><br>• <b>6 знаков после запятой</b><br>• <b>7 знаков после запятой</b><br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Расчет ЗПМ</td>
-                                <td class="col-desc">Способ расчета заработной платы машинистов<br>• <b>По доле зар.платы в стоимости экспл.машин</b><br>• <b>По стоимости чел/часа работы машинистов</b><br></td>
+                                <td class="col-desc">Способ расчета заработной платы машинистов:<br>• <b>По доле зар.платы в стоимости экспл.машин</b><br>• <b>По стоимости чел/часа работы машинистов</b><br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Расчет импорта</td>
-                                <td class="col-desc">Способ расчета для импорта в ОС/ССР/Сводку затрат/Смету контракта<br>• <b>Базисно-индексный расчет</b><br>• <b>Ресурсный расчет</b><br>• <b>Расчет в базисных ценах</b><br></td>
+                                <td class="col-desc">Способ расчета для импорта в ОС/ССР/Сводку затрат/Смету контракта:<br>• <b>Базисно-индексный расчет</b><br>• <b>Ресурсный расчет</b><br>• <b>Расчет в базисных ценах</b><br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Группировка</td>
-                                <td class="col-desc">Группировка позиций при формировании конструктивных элементов для импорта в Смету контракта<br>• <b>Локальная смета</b><br>• <b>Раздел в смете</b><br>• <b>Позиции в смете</b><br></td>
+                                <td class="col-desc">Группировка позиций при формировании конструктивных элементов для импорта в Смету контракта:<br>• <b>Локальная смета</b><br>• <b>Раздел в смете</b><br>• <b>Позиции в смете</b><br></td>
                             </tr>
                             <tr>
                                 <td class="fw-bold col-name">Наименование затрат</td>
@@ -162,6 +177,12 @@
                 <a href="../index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="../legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="../legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>

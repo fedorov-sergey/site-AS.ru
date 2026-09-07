@@ -2,601 +2,871 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://analizsmet.ru/index.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/videos.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/pay.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/rate.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://analizsmet.ru/parsers/BF1_FaulBblBoPBazbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/BF2_PrintSettings_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/BF3_Expopt_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/BO1_BkladkaOBbektbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://analizsmet.ru/parsers/C01_obshii_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/C02_obshii_TC_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/CP1_obshie_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/CP2_svoistva_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/CP3_podpisi_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/CU1_izmeriteli_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/E01_SuperBOP_Parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/I01_Undekcbl_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP1_obshie_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP2_dop_nachislenie_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP3_svoistva_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP4_podpisi_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP5_Kommentarii_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP6_GunepCcblLku_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP7_Blozhenu9_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/IP8_SHufpoBanue_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LD10_IndexesByCategory_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD1_UToGuBM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD2_UToGuBUM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD3_UToGuPM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD4_ItogiPoSmeteABTO_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD5_VedomostResursov_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD6_GornblePaBotbl_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LD7_Oshubki_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LD8_BkladkaOBbektbl_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LD8_ColorFlagBook_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LD9_IndexesByGraph_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LP01_Raschet_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP02_obshie_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP03_Metodika2020_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP04_FRSN_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP05_Indexi_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP06_OT_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP07_HP_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP08_SP_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LP09_bazmetod_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP10_resmetod_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP10_1984_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP11_okruglenie_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP11_resmetod_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP12_itogi_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP12_okruglenie_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP13_PeguonZona_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP13_itogi_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP14_K_Parametrs.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP14_PeguonZona_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP15_BudblPaboT_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP15_K_Parametrs.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP16_HPuCP_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP16_BudblPaboT_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP17_Koeff_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP17_HPuCP_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP18_Tablucha_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP18_Koeff_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP19_PHR_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP19_Tablucha_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP20_indexes_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP20_PHR_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP21_Kpoziciam_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP21_indexes_parser.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP22_Kpecypcam_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP22_Kpoziciam_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP23_DopHachuclenue_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP23_Kpecypcam_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP24_AutoLoad_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP24_DopHachuclenue_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP25_LumiT_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP25_AutoLoad_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP26_Zumnue_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP26_LumiT_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP27_HopmatuBbl_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP27_Zumnue_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP28_Tendernii_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP28_HopmatuBbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP29_OCuCCP_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP29_Tendernii_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP30_Akti_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP30_OCuCCP_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP31_Oglavlenir_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP31_OCuCCP_Dop_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP32_svoistva_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP32_Akti_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP33_Data_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP33_Oglavlenir_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP34_podpisi_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP34_svoistva_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP35_Pepemennuu_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP35_Data_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP36_Kommentarii_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP36_podpisi_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP37_GunepCcblLku_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP37_Pepemennuu_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP38_Blozhenu9_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP38_Kommentarii_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP39_Tablichu_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP39_GunepCcblLku_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP40_SHufpoBanue_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP40_Blozhenu9_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP41_ranzhirovanie_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP41_Tablichu_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP42_Odnopodnble_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP42_SHufpoBanue_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP43_CnpaBochnuk_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP43_ranzhirovanie_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP44_GopnblePabotbl_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP44_Odnopodnble_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LP45_numerachion_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LP45_CnpaBochnuk_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LP46_GopnblePabotbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LP47_numerachion_parser.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR01_OсnoBnou_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR02_FuzObem_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR03_BudPaboT_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LR04_KoeffNRSP_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR05_Koef_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR07_Undekcu_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR08_Pecypc_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR09_DonPepeBozka_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR10_CB9lZU_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR11_Ppochee_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR12_UToguBUM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR13_UToguPM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR14_UToguBM_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR15_CocTaBZaTp_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR16_Coctav_pabot_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR17_Kommentaruu_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LR18_Gunep_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/LR30_ColorFlagBook_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/LR20_KAC_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/LR21_PosTavxhik_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LU1_GunepCcblLku_Bce_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/LU2_GlaBa_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/M1_Makrosi_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/M2_Makrosi_Pro_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/M3_Makrosi_Pro+Struktura_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OC01_Pozicii_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OD1_GornblePaBotbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP01_Raschet_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP02_Koeficienty_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP03_Indeksy_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP04_SSR_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP05_RegionZona_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP06_svoistva_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP07_Data_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP08_podpisi_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP09_Pepemennuu_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP10_Kommentarii_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP11_GunepCcblLku_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP12_Blozhenu9_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP13_Tablichu_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP14_SHufpoBanue_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP15_NMCK_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP18_Indeksy_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP19_GopnblePabotbl_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/OP20_Prochee_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/P1_all_files_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/P2_folder_vse_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/P3_folder_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/P4_grandsmeta_vse_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/P5_grandsmeta_parser.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/PHG01_CToumoctbPoPapke_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/PHG02_CToumoctuBce_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/PHG03_osnovnoi_MTP_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/PHG04_osnovnoi_MTP+Ctoimosti_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://analizsmet.ru/parsers/PHG05_Pemont+Ctoimosti_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://analizsmet.ru/parsers/PHG06_Pemont+Ctoimosti_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/PHG07_PMM+Ctoimosti_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/PHG08_Proverka_RMM_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://analizsmet.ru/parsers/PHG09_Proverka_RMTR_parsers.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T1_Properties_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T2_DataSign_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T3_DataXML_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T4_Data_Analiz_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T5_DataTexHuch_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://analizsmet.ru/parsers/T8_Expopt_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://analizsmet.ru/parsers/T9_Metodika2020_parsers.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

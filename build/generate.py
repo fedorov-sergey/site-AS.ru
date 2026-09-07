@@ -30,14 +30,14 @@ from collections import OrderedDict
 # Директория этого скрипта (build/)
 BUILD_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Путь к папке с .py файлами парсеров
-PARSERS_DIR = r"C:\Users\PC\Desktop\77 кл5\core\parsers"
+# Путь к папке с .py файлами парсеров========================================ВСТАВИТЬ===============
+PARSERS_DIR = r"C:\Users\PC\Desktop\Сайт 260907\parsers Удалить при публикации"
 
 # Путь к папке со скриншотами
 PIC_DIR = os.path.join(PARSERS_DIR, "pic")
 
-# Путь к сайту (куда генерировать HTML)
-SITE_DIR = r"C:\Users\PC\Desktop\Сайт 260714 0935"
+# Путь к сайту (куда генерировать HTML)========================================ВСТАВИТЬ===============
+SITE_DIR = r"C:\Users\PC\Desktop\Сайт 260907"
 
 # Папка для страниц парсеров (относительно SITE_DIR)
 PARSERS_OUTPUT_DIR = os.path.join(SITE_DIR, "parsers")
@@ -50,6 +50,21 @@ SKIP_FILES = {"__init__.py", "base_parser.py"}
 
 # Шаблоны
 TEMPLATE_PARSER = os.path.join(BUILD_DIR, "template_parser.html")
+
+# Код счётчика Яндекс Метрики (вставляется в <head> каталога parsers.html)
+YANDEX_METRIKA = """<!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->"""
 
 
 # ============================================================
@@ -524,6 +539,9 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {YANDEX_METRIKA}
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
     <title>Парсеры - Анализ смет</title>
     <meta name="description" content="Каталог парсеров приложения Анализ смет. Все доступные парсеры для анализа файлов ГРАНД-Смета (.gsfx).">
 
@@ -721,6 +739,12 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
                 <a href="index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>
@@ -934,7 +958,7 @@ def main():
     print(f"  [OK] Сгенерировано {len(all_parsers)} страниц в parsers/")
 
     # Убираем старые файлы из корня
-    keep_files = {"index.html", "videos.html", "rate.html", "pay.html", "404.html",
+    keep_files = {"index.html", "videos.html", "rate.html", "pay.html", "404.html", "error.html",
                   "parsers.html", "yandex_3b77755ac8d47a10.html", "generate_parsers.py",
                   "parsers.json", "AGENTS.md", "README.md", "CNAME", "sitemap.xml"}
     removed = 0

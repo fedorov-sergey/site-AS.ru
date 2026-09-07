@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
+
+        ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
     <title>Парсеры - Анализ смет</title>
     <meta name="description" content="Каталог парсеров приложения Анализ смет. Все доступные парсеры для анализа файлов ГРАНД-Смета (.gsfx).">
 
@@ -158,8 +173,8 @@
 
             <!-- Статистика -->
             <div class="text-white-50 small">
-                <i class="bi bi-puzzle"></i> Всего парсеров: <span id="parserCount">95</span>
-                <span class="ms-3"><i class="bi bi-star-fill text-warning"></i> Частные: 5</span>
+                <i class="bi bi-puzzle"></i> Всего парсеров: <span id="parserCount">140</span>
+                <span class="ms-3"><i class="bi bi-star-fill text-warning"></i> Частные: 8</span>
             </div>
         </div>
     </section>
@@ -175,8 +190,8 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            ЛС → Расценки
-                            <span class="category-count">(17)</span>
+                            Локальная смета → Расценки
+                            <span class="category-count">(19)</span>
                         </button>
                     </h2>
                     <div id="collapse0" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
@@ -185,119 +200,133 @@
                             <div class="parser-item" data-name="ЛР01 Основной">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Основной</span>
-                                <span class="parser-badge ms-auto">9 столбцов</span>
+                                <span class="parser-badge ms-auto">11 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR02_FuzObem_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР02 ╠ Физобъем">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Физобъем</span>
-                                <span class="parser-badge ms-auto">19 столбцов</span>
+                                <span class="parser-badge ms-auto">21 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR03_BudPaboT_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР03 ╠ Вид работ">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Вид работ</span>
-                                <span class="parser-badge ms-auto">18 столбцов</span>
+                                <span class="parser-badge ms-auto">19 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/LR04_KoeffNRSP_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛР04  ╚ К-ты к НР и СП">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ К-ты к НР и СП</span>
+                                <span class="parser-badge ms-auto">33 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR05_Koef_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР05 ╠ Коэффициенты">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Коэффициенты</span>
-                                <span class="parser-badge ms-auto">22 столбцов</span>
+                                <span class="parser-badge ms-auto">25 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR07_Undekcu_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР07 ╠ Индексы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Индексы</span>
-                                <span class="parser-badge ms-auto">14 столбцов</span>
+                                <span class="parser-badge ms-auto">15 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR08_Pecypc_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР08 ╠ Ресурс">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Ресурс</span>
-                                <span class="parser-badge ms-auto">16 столбцов</span>
+                                <span class="parser-badge ms-auto">19 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR09_DonPepeBozka_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР09 ║  ╠ Доп. перевозка">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">║  ╠ Доп. перевозка</span>
-                                <span class="parser-badge ms-auto">22 столбцов</span>
+                                <span class="parser-badge ms-auto">25 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR10_CB9lZU_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР10 ║  ╚ Связи">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">║  ╚ Связи</span>
-                                <span class="parser-badge ms-auto">13 столбцов</span>
+                                <span class="parser-badge ms-auto">15 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR11_Ppochee_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР11 ╠ Прочее">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Прочее</span>
-                                <span class="parser-badge ms-auto">16 столбцов</span>
+                                <span class="parser-badge ms-auto">18 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR12_UToguBUM_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР12 ║╔ Итоги (БИМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">║╔ Итоги (БИМ)</span>
-                                <span class="parser-badge ms-auto">18 столбцов</span>
+                                <span class="parser-badge ms-auto">20 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR13_UToguPM_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР13 ╠╬ Итоги (РМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠╬ Итоги (РМ)</span>
-                                <span class="parser-badge ms-auto">18 столбцов</span>
+                                <span class="parser-badge ms-auto">20 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR14_UToguBM_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР14 ║╚ Итоги (БМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">║╚ Итоги (БМ)</span>
-                                <span class="parser-badge ms-auto">18 столбцов</span>
+                                <span class="parser-badge ms-auto">20 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR15_CocTaBZaTp_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР15 ╠ Состав затрат">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Состав затрат</span>
-                                <span class="parser-badge ms-auto">26 столбцов</span>
+                                <span class="parser-badge ms-auto">28 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR16_Coctav_pabot_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР16 ╠ Состав работ">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Состав работ</span>
-                                <span class="parser-badge ms-auto">10 столбцов</span>
+                                <span class="parser-badge ms-auto">13 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR17_Kommentaruu_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР17 ╠ Комментарии">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Комментарии</span>
-                                <span class="parser-badge ms-auto">11 столбцов</span>
+                                <span class="parser-badge ms-auto">14 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LR18_Gunep_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛР18 ╠ Гиперссылки">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Гиперссылки</span>
-                                <span class="parser-badge ms-auto">12 столбцов</span>
+                                <span class="parser-badge ms-auto">14 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LR30_ColorFlagBook_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛР30 Цвет, Флаг, Закладка">
+                        <a href="parsers/LR20_KAC_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛР20 ╚ КАЦ">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Цвет, Флаг, Закладка</span>
-                                <span class="parser-badge ms-auto">12 столбцов</span>
+                                <span class="parser-name">╚ КАЦ</span>
+                                <span class="parser-badge ms-auto">30 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/LR21_PosTavxhik_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛР21   ╚ Поставщик">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ Поставщик</span>
+                                <span class="parser-badge ms-auto">30 столбцов</span>
                             </div>
                         </a>
                         </div>
@@ -307,12 +336,19 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            ЛС → Параметры
-                            <span class="category-count">(44)</span>
+                            Локальная смета → Параметры
+                            <span class="category-count">(47)</span>
                         </button>
                     </h2>
                     <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
+                        <a href="parsers/LP01_Raschet_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП01 Расчет">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Расчет</span>
+                                <span class="parser-badge ms-auto">2 столбцов</span>
+                            </div>
+                        </a>
                         <a href="parsers/LP02_obshie_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ЛП02 ╠ Общие">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
@@ -369,253 +405,267 @@
                                 <span class="parser-badge ms-auto">5 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP10_resmetod_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП10 ╠ Рес. метод">
+                        <a href="parsers/LP10_1984_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП10 ║ ╚ 1984г.">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">║ ╚ 1984г.</span>
+                                <span class="parser-badge ms-auto">12 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/LP11_resmetod_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП11 ╠ Рес. метод">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Рес. метод</span>
                                 <span class="parser-badge ms-auto">4 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP11_okruglenie_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП11 ╠ Округление">
+                        <a href="parsers/LP12_okruglenie_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП12 ╠ Округление">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Округление</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP12_itogi_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП12 ╚ Итоги">
+                        <a href="parsers/LP13_itogi_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП13 ╚ Итоги">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Итоги</span>
                                 <span class="parser-badge ms-auto">10 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP13_PeguonZona_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП13 Регион и зона">
+                        <a href="parsers/LP14_PeguonZona_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП14 Регион и зона">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Регион и зона</span>
                                 <span class="parser-badge ms-auto">24 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP14_K_Parametrs.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП14 Коэф-ты к итогам">
+                        <a href="parsers/LP15_K_Parametrs.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП15 Коэф-ты к итогам">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Коэф-ты к итогам</span>
                                 <span class="parser-badge ms-auto">23 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP15_BudblPaboT_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП15 Виды работ">
+                        <a href="parsers/LP16_BudblPaboT_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП16 Виды работ">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Виды работ</span>
                                 <span class="parser-badge ms-auto">6 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP16_HPuCP_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП16 ╠ НР и СП">
+                        <a href="parsers/LP17_HPuCP_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП17 ╠ НР и СП">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ НР и СП</span>
                                 <span class="parser-badge ms-auto">15 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP17_Koeff_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП17 ╠ Коэффициенты">
+                        <a href="parsers/LP18_Koeff_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП18 ╠ Коэффициенты">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Коэффициенты</span>
                                 <span class="parser-badge ms-auto">25 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP18_Tablucha_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП18 ╠ Таблица">
+                        <a href="parsers/LP19_Tablucha_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП19 ╠ Таблица">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Таблица</span>
-                                <span class="parser-badge ms-auto">23 столбцов</span>
+                                <span class="parser-badge ms-auto">26 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP19_PHR_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП19 ╚ ПНР">
+                        <a href="parsers/LP20_PHR_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП20 ╚ ПНР">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ ПНР</span>
                                 <span class="parser-badge ms-auto">6 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP20_indexes_parser.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП20 Индексы">
+                        <a href="parsers/LP21_indexes_parser.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП21 Индексы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Индексы</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP21_Kpoziciam_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП21 К позициям">
+                        <a href="parsers/LP22_Kpoziciam_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП22 ╠ К позициям">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">К позициям</span>
+                                <span class="parser-name">╠ К позициям</span>
                                 <span class="parser-badge ms-auto">10 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP22_Kpecypcam_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП22 ╠ К ресурсам">
+                        <a href="parsers/LP23_Kpecypcam_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП23 ╠ К ресурсам">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ К ресурсам</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP23_DopHachuclenue_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП23 ╚ Доп. начисления">
+                        <a href="parsers/LP24_DopHachuclenue_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП24 ╚ Доп. начисления">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Доп. начисления</span>
                                 <span class="parser-badge ms-auto">4 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP24_AutoLoad_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП24 Автозагрузка">
+                        <a href="parsers/LP25_AutoLoad_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП25 Автозагрузка">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Автозагрузка</span>
                                 <span class="parser-badge ms-auto">22 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP25_LumiT_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП25 Лимит. затраты">
+                        <a href="parsers/LP26_LumiT_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП26 Лимит. затраты">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Лимит. затраты</span>
                                 <span class="parser-badge ms-auto">12 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP26_Zumnue_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП26 ╚ Зимние">
+                        <a href="parsers/LP27_Zumnue_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП27 ╚ Зимние">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Зимние</span>
                                 <span class="parser-badge ms-auto">16 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP27_HopmatuBbl_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП27   ╚ Нормативы">
+                        <a href="parsers/LP28_HopmatuBbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП28   ╚ Нормативы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Нормативы</span>
                                 <span class="parser-badge ms-auto">7 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP28_Tendernii_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП28 Тендерный к-т">
+                        <a href="parsers/LP29_Tendernii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП29 Тендерный к-т">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Тендерный к-т</span>
                                 <span class="parser-badge ms-auto">6 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP29_OCuCCP_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП29 ОС и ССР">
+                        <a href="parsers/LP30_OCuCCP_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП30 ОС и ССР">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">ОС и ССР</span>
+                                <span class="parser-badge ms-auto">10 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/LP31_OCuCCP_Dop_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП31 ╚ Дополнительно">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ Дополнительно</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP30_Akti_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП30 Акты выплн. работ">
+                        <a href="parsers/LP32_Akti_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП32 Акты выплн. работ">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Акты выплн. работ</span>
                                 <span class="parser-badge ms-auto">7 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP31_Oglavlenir_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП31 Оглавление">
+                        <a href="parsers/LP33_Oglavlenir_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП33 Оглавление">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Оглавление</span>
-                                <span class="parser-badge ms-auto">7 столбцов</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP32_svoistva_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП32 Свойства">
+                        <a href="parsers/LP34_svoistva_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП34 Свойства">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Свойства</span>
                                 <span class="parser-badge ms-auto">8 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP33_Data_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП33 ╠ Даты">
+                        <a href="parsers/LP35_Data_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП35 ╠ Даты">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Даты</span>
                                 <span class="parser-badge ms-auto">5 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP34_podpisi_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП34 ╠ Подписи">
+                        <a href="parsers/LP36_podpisi_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП36 ╠ Подписи">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Подписи</span>
                                 <span class="parser-badge ms-auto">4 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP35_Pepemennuu_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП35 ╠ Переменные">
+                        <a href="parsers/LP37_Pepemennuu_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП37 ╠ Переменные">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Переменные</span>
                                 <span class="parser-badge ms-auto">5 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP36_Kommentarii_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП36 ╠ Комментарий">
+                        <a href="parsers/LP38_Kommentarii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП38 ╠ Комментарий">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Комментарий</span>
                                 <span class="parser-badge ms-auto">1 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP37_GunepCcblLku_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП37 ╠ Гиперссылки">
+                        <a href="parsers/LP39_GunepCcblLku_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП39 ╠ Гиперссылки">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Гиперссылки</span>
                                 <span class="parser-badge ms-auto">2 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP38_Blozhenu9_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП38 ╠ Вложения">
+                        <a href="parsers/LP40_Blozhenu9_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП40 ╠ Вложения">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Вложения</span>
                                 <span class="parser-badge ms-auto">10 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP39_Tablichu_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП39 ╠ Таблицы">
+                        <a href="parsers/LP41_Tablichu_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП41 ╠ Таблицы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Таблицы</span>
                                 <span class="parser-badge ms-auto">4 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP40_SHufpoBanue_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП40 ╚ Безопасность">
+                        <a href="parsers/LP42_SHufpoBanue_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП42 ╚ Безопасность">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Безопасность</span>
                                 <span class="parser-badge ms-auto">1 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP41_ranzhirovanie_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП41 Ранжирование">
+                        <a href="parsers/LP43_ranzhirovanie_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП43 Ранжирование">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Ранжирование</span>
                                 <span class="parser-badge ms-auto">10 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP42_Odnopodnble_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП42 Однородные ресурсы">
+                        <a href="parsers/LP44_Odnopodnble_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП44 Однородные ресурсы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Однородные ресурсы</span>
                                 <span class="parser-badge ms-auto">5 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP43_CnpaBochnuk_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП43 ╚ Справочник">
+                        <a href="parsers/LP45_CnpaBochnuk_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП45 ╚ Справочник">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Справочник</span>
                                 <span class="parser-badge ms-auto">1 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP44_GopnblePabotbl_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП44 Горные работы">
+                        <a href="parsers/LP46_GopnblePabotbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП46 Горные работы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Горные работы</span>
                                 <span class="parser-badge ms-auto">7 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LP45_numerachion_parser.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛП45 Прочие">
+                        <a href="parsers/LP47_numerachion_parser.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛП47 Прочие">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Прочие</span>
                                 <span class="parser-badge ms-auto">7 столбцов</span>
@@ -628,66 +678,80 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            ЛС → Другие
-                            <span class="category-count">(8)</span>
+                            Локальная смета → Другие
+                            <span class="category-count">(10)</span>
                         </button>
                     </h2>
                     <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
+                        <a href="parsers/LD10_IndexesByCategory_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛД10 Индексы по категориям">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Индексы по категориям</span>
+                                <span class="parser-badge ms-auto">3 столбцов</span>
+                            </div>
+                        </a>
                         <a href="parsers/LD1_UToGuBM_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД1 ╔ Итоги (БМ)">
+                            <div class="parser-item" data-name="ЛД01 ╔ Итоги (БМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╔ Итоги (БМ)</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD2_UToGuBUM_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД2 ╠ Итоги (БИМ)">
+                            <div class="parser-item" data-name="ЛД02 ╠ Итоги (БИМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╠ Итоги (БИМ)</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD3_UToGuPM_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД3 ╚ Итоги (РМ)">
+                            <div class="parser-item" data-name="ЛД03 ╚ Итоги (РМ)">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Итоги (РМ)</span>
                                 <span class="parser-badge ms-auto">9 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD4_ItogiPoSmeteABTO_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД4   ╚ Авторазвертывание">
+                            <div class="parser-item" data-name="ЛД04   ╚ Авторазвертывание">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Авторазвертывание</span>
                                 <span class="parser-badge ms-auto">1 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD5_VedomostResursov_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД5 Ресурсы в смете">
+                            <div class="parser-item" data-name="ЛД05 Ресурсы в смете">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Ресурсы в смете</span>
                                 <span class="parser-badge ms-auto">12 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD6_GornblePaBotbl_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД6 Таблица Горные работы">
+                            <div class="parser-item" data-name="ЛД06 Таблица Горные работы">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Таблица Горные работы</span>
                                 <span class="parser-badge ms-auto">8 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/LD7_Oshubki_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД7 Ошибки по итогам">
+                            <div class="parser-item" data-name="ЛД07 Ошибки по итогам">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Ошибки по итогам</span>
                                 <span class="parser-badge ms-auto">3 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/LD8_BkladkaOBbektbl_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ЛД8 Вкладка Объекты">
+                        <a href="parsers/LD8_ColorFlagBook_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛД08 Цвет, Флаг, Закладка">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Вкладка Объекты</span>
-                                <span class="parser-badge ms-auto">8 столбцов</span>
+                                <span class="parser-name">Цвет, Флаг, Закладка</span>
+                                <span class="parser-badge ms-auto">12 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/LD9_IndexesByGraph_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЛД09 Индексы по графам">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Индексы по графам</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
                             </div>
                         </a>
                         </div>
@@ -697,7 +761,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            ЛС → Улучшенный
+                            Локальная смета → Улучшенный
                             <span class="category-count">(2)</span>
                         </button>
                     </h2>
@@ -724,24 +788,17 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            Ценник
-                            <span class="category-count">(2)</span>
+                            Объектная смета → Строки
+                            <span class="category-count">(1)</span>
                         </button>
                     </h2>
                     <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
-                        <a href="parsers/C01_obshii_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="Ц01 Общий">
+                        <a href="parsers/OC01_Pozicii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОС01 Строки">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Общий</span>
-                                <span class="parser-badge ms-auto">20 столбцов</span>
-                            </div>
-                        </a>
-                        <a href="parsers/C02_obshii_TC_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="Ц02 ╚ ТЦ">
-                                <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">╚ ТЦ</span>
-                                <span class="parser-badge ms-auto">20 столбцов</span>
+                                <span class="parser-name">Строки</span>
+                                <span class="parser-badge ms-auto">49 столбцов</span>
                             </div>
                         </a>
                         </div>
@@ -751,17 +808,136 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
                             <i class="bi bi-folder me-2 text-primary"></i>
-                            ИНД
-                            <span class="category-count">(1)</span>
+                            Объектная смета → Параметры
+                            <span class="category-count">(18)</span>
                         </button>
                     </h2>
                     <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
-                        <a href="parsers/I01_Undekcbl_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="И01 Сборник индексов">
+                        <a href="parsers/OP01_Raschet_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП01 Расчет">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Сборник индексов</span>
-                                <span class="parser-badge ms-auto">13 столбцов</span>
+                                <span class="parser-name">Расчет</span>
+                                <span class="parser-badge ms-auto">3 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP02_Koeficienty_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП02 Коэффициенты">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Коэффициенты</span>
+                                <span class="parser-badge ms-auto">15 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP03_Indeksy_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП03 Индексы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Индексы</span>
+                                <span class="parser-badge ms-auto">10 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP04_SSR_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП04 ОС и ССР">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">ОС и ССР</span>
+                                <span class="parser-badge ms-auto">9 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP05_RegionZona_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП05 Регион и зона">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Регион и зона</span>
+                                <span class="parser-badge ms-auto">2 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP06_svoistva_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП06 Свойства">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Свойства</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP07_Data_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП07 ╠ Даты">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Даты</span>
+                                <span class="parser-badge ms-auto">5 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP08_podpisi_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП08 ╠ Подписи">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Подписи</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP09_Pepemennuu_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП09 ╠ Переменные">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Переменные</span>
+                                <span class="parser-badge ms-auto">5 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP10_Kommentarii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП10 ╠ Комментарий">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Комментарий</span>
+                                <span class="parser-badge ms-auto">1 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP11_GunepCcblLku_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП11 ╠ Гиперссылки">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Гиперссылки</span>
+                                <span class="parser-badge ms-auto">2 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP12_Blozhenu9_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП12 ╠ Вложения">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Вложения</span>
+                                <span class="parser-badge ms-auto">10 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP13_Tablichu_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП13 ╠ Таблицы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Таблицы</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP14_SHufpoBanue_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП14 ╚ Безопасность">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ Безопасность</span>
+                                <span class="parser-badge ms-auto">1 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP15_NMCK_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП15 НМЦК">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">НМЦК</span>
+                                <span class="parser-badge ms-auto">9 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP18_Indeksy_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП18 ╚ Индексы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ Индексы</span>
+                                <span class="parser-badge ms-auto">3 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP19_GopnblePabotbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП19 Горные работы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Горные работы</span>
+                                <span class="parser-badge ms-auto">7 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/OP20_Prochee_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОП20 Прочее">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Прочее</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
                             </div>
                         </a>
                         </div>
@@ -771,11 +947,255 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
                             <i class="bi bi-folder me-2 text-primary"></i>
+                            Объектная смета → Другие
+                            <span class="category-count">(1)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/OD1_GornblePaBotbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ОД1 Таблица Горные работы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Таблица Горные работы</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Ценник → Цены
+                            <span class="category-count">(2)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/C01_obshii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="Ц01 Общий">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Общий</span>
+                                <span class="parser-badge ms-auto">26 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/C02_obshii_TC_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="Ц02 ╚ ТЦ">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ ТЦ</span>
+                                <span class="parser-badge ms-auto">26 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Ценник → Параметры
+                            <span class="category-count">(3)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/CP1_obshie_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЦП1 Общие">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Общие</span>
+                                <span class="parser-badge ms-auto">9 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/CP2_svoistva_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЦП2 Свойства">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Свойства</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/CP3_podpisi_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЦП3 ╠ Подписи">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Подписи</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Ценник → Улучшенный
+                            <span class="category-count">(1)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/CU1_izmeriteli_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ЦУ1 Измерители">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Измерители</span>
+                                <span class="parser-badge ms-auto">2 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Сборник индексов → Индексы
+                            <span class="category-count">(1)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/I01_Undekcbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="И01 Индексы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Индексы</span>
+                                <span class="parser-badge ms-auto">13 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Сборник индексов → Параметры
+                            <span class="category-count">(8)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/IP1_obshie_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП1 Общие">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Общие</span>
+                                <span class="parser-badge ms-auto">5 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP2_dop_nachislenie_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП2 Доп. начисления">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Доп. начисления</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP3_svoistva_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП3 Свойства">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Свойства</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP4_podpisi_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП4 ╠ Подписи">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Подписи</span>
+                                <span class="parser-badge ms-auto">4 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP5_Kommentarii_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП5 ╠ Комментарий">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Комментарий</span>
+                                <span class="parser-badge ms-auto">1 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP6_GunepCcblLku_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП6 ╠ Гиперссылки">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Гиперссылки</span>
+                                <span class="parser-badge ms-auto">2 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP7_Blozhenu9_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП7 ╠ Вложения">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╠ Вложения</span>
+                                <span class="parser-badge ms-auto">10 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/IP8_SHufpoBanue_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ИП8 ╚ Безопасность">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">╚ Безопасность</span>
+                                <span class="parser-badge ms-auto">1 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Вкладка «Объекты»
+                            <span class="category-count">(1)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/BO1_BkladkaOBbektbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ВО1 Проводник">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Проводник</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                            <i class="bi bi-folder me-2 text-primary"></i>
+                            Вкладка «Файл»
+                            <span class="category-count">(3)</span>
+                        </button>
+                    </h2>
+                    <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                        <div class="accordion-body p-0">
+                        <a href="parsers/BF1_FaulBblBoPBazbl_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ВФ1 Выбор базы">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Выбор базы</span>
+                                <span class="parser-badge ms-auto">6 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/BF2_PrintSettings_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ВФ2 Настройки печати">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Настройки печати</span>
+                                <span class="parser-badge ms-auto">5 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/BF3_Expopt_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ВФ3 Экспорт/Импорт">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Экспорт/Импорт</span>
+                                <span class="parser-badge ms-auto">8 столбцов</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                            <i class="bi bi-folder me-2 text-primary"></i>
                             Макросы
                             <span class="category-count">(3)</span>
                         </button>
                     </h2>
-                    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                    <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
                         <a href="parsers/M1_Makrosi_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="М1 Обычный">
@@ -803,13 +1223,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
                             <i class="bi bi-folder me-2 text-primary"></i>
                             Проводник
                             <span class="category-count">(5)</span>
                         </button>
                     </h2>
-                    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                    <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
                         <a href="parsers/P1_all_files_parser.html" class="text-decoration-none">
                             <div class="parser-item" data-name="П1 Файлы - Все">
@@ -851,13 +1271,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
                             <i class="bi bi-folder me-2 text-primary"></i>
                             Вывод в Excel
                             <span class="category-count">(1)</span>
                         </button>
                     </h2>
-                    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                    <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
                         <a href="parsers/E01_SuperBOP_Parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="Е1 СуперВОР">
@@ -871,13 +1291,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
                             <i class="bi bi-folder me-2 text-primary"></i>
                             ПХГ
-                            <span class="category-count">(5)</span>
+                            <span class="category-count">(8)</span>
                         </button>
                     </h2>
-                    <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                    <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
                         <a href="parsers/PHG01_CToumoctbPoPapke_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="ПХ01 Стоимость по сохранению">
@@ -887,9 +1307,9 @@
                             </div>
                         </a>
                         <a href="parsers/PHG02_CToumoctuBce_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ПХ02 Стоимости все (номер заказа по пути к файлу)">
+                            <div class="parser-item" data-name="ПХ02 Стоимости все">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Стоимости все (номер заказа по пути к файлу)</span>
+                                <span class="parser-name">Стоимости все</span>
                                 <span class="parser-badge ms-auto">5 столбцов</span>
                             </div>
                         </a>
@@ -907,11 +1327,32 @@
                                 <span class="parser-badge ms-auto">17 столбцов</span>
                             </div>
                         </a>
-                        <a href="parsers/PHG05_Pemont+Ctoimosti_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="ПХ05 Ремонт+Стоимости">
+                        <a href="parsers/PHG06_Pemont+Ctoimosti_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ПХ06 Ремонт+Стоимости">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">Ремонт+Стоимости</span>
                                 <span class="parser-badge ms-auto">17 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/PHG07_PMM+Ctoimosti_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ПХ07 РММ+Стоимости">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">РММ+Стоимости</span>
+                                <span class="parser-badge ms-auto">17 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/PHG08_Proverka_RMM_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ПХ08 Проверка РММ">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Проверка РММ</span>
+                                <span class="parser-badge ms-auto">19 столбцов</span>
+                            </div>
+                        </a>
+                        <a href="parsers/PHG09_Proverka_RMTR_parsers.html" class="text-decoration-none">
+                            <div class="parser-item" data-name="ПХ09 Проверка РМТР">
+                                <span class="icon blue"><i class="bi bi-table"></i></span>
+                                <span class="parser-name">Проверка РМТР</span>
+                                <span class="parser-badge ms-auto">19 столбцов</span>
                             </div>
                         </a>
                         </div>
@@ -919,13 +1360,13 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
                             <i class="bi bi-folder me-2 text-primary"></i>
                             Технический
-                            <span class="category-count">(7)</span>
+                            <span class="category-count">(6)</span>
                         </button>
                     </h2>
-                    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
+                    <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#parserAccordion">
                         <div class="accordion-body p-0">
                         <a href="parsers/T1_Properties_parsers.html" class="text-decoration-none">
                             <div class="parser-item" data-name="Т1 Properties.txt">
@@ -960,13 +1401,6 @@
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
                                 <span class="parser-name">╚ Технические атрибуты</span>
                                 <span class="parser-badge ms-auto">5 столбцов</span>
-                            </div>
-                        </a>
-                        <a href="parsers/T8_Expopt_parsers.html" class="text-decoration-none">
-                            <div class="parser-item" data-name="Т8 Экспорт/Импорт">
-                                <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">Экспорт/Импорт</span>
-                                <span class="parser-badge ms-auto">8 столбцов</span>
                             </div>
                         </a>
                         <a href="parsers/T9_Metodika2020_parsers.html" class="text-decoration-none">
@@ -1008,6 +1442,12 @@
                 <a href="index.html" class="text-white-50 text-decoration-none">
                     <i class="bi bi-arrow-left"></i> На главную
                 </a>
+            </p>
+            <p class="mb-2 small text-white-50">
+                Используя сайт, вы принимаете
+                <a href="legal/privacy.html" class="text-white-50 text-decoration-none">Политику конфиденциальности</a>
+                и
+                <a href="legal/cookie.html" class="text-white-50 text-decoration-none">Cookie-политику</a>.
             </p>
             <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
         </div>

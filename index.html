@@ -18,7 +18,8 @@
     <!-- /Yandex.Metrika counter -->
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="icon" type="image/x-icon" href="icon.ico">
-    <title>Анализ смет - файлов в формате ГРАНД-Смета (.gsfx) для Windows и Linux</title>
+    <title>Анализ смет - быстрая проверка сметных файлов ГРАНД-Смета (.gsfx)</title>
+    <meta name="description" content="«Анализ смет» — программа для БЫСТРОЙ проверки сметной документации из «ГРАНД-Сметы» (.gsfx). Обрабатывайте любые объемы: массовая проверка всего пакета, открытие конкретных проблемных позиций и гибкие фильтры. Работает на Windows и Linux. Попробуйте 5 дней БЕСПЛАТНО.">
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -84,6 +85,21 @@
             border-radius: 50%;
             padding: 1.2rem;
         }
+
+        .social-links-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 12px;
+            row-gap: 14px;
+        }
+        .social-links-row .btn {
+            flex-shrink: 0;
+            min-width: 70px;
+        }
+        .btn-outline-light {
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body>
@@ -148,14 +164,14 @@
             <!-- БЛОК СОЦСЕТЕЙ -->
             <div class="mt-5 pt-3">
                 <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 1px;">Следите за обновлениями</p>
-                <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <!-- ЗАМЕНИ # НА СВОИ ССЫЛКИ -->
-                    <a href="https://t.me/pznrsp" class="btn btn-outline-light btn-sm">Telegram</a>
-                    <a href="https://www.youtube.com/@pznrsp" class="btn btn-outline-light btn-sm">YouTube</a>
-                    <a href="https://vk.com/pznrsp" class="btn btn-outline-light btn-sm">ВК</a>
-                    <a href="https://vkvideo.ru/@pznrsp" class="btn btn-outline-light btn-sm">ВК Видео</a>
-                    <a href="https://dzen.ru/pznrsp" class="btn btn-outline-light btn-sm">Дзен</a>
-                    <a href="https://rutube.ru/channel/8968994" class="btn btn-outline-light btn-sm">RuTube</a>
+                <div class="social-links-row">
+                    <a href="https://t.me/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Telegram</a>
+                    <a href="https://vk.com/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК</a>
+                    <a href="https://max.ru/channel_analizsmet" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">MAX</a>
+                    <a href="https://dzen.ru/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Дзен</a>
+                    <a href="https://www.youtube.com/@pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">YouTube</a>
+                    <a href="https://vkvideo.ru/@pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК Видео</a>
+                    <a href="https://rutube.ru/channel/8968994" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">RuTube</a>
                 </div>
             </div>
         </div>

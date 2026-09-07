@@ -147,6 +147,8 @@ def parse_parser_file(filepath: str) -> List[Dict[str, Any]]:
             "file_name": os.path.basename(filepath).replace(".py", ""),
             "NAME": "",
             "DESCRIPTION": "",
+            "META_TITLE": "",
+            "META_DESC": "",
             "PREMIUM": False,
             "PIC": None,
             "PATH": "",
@@ -157,7 +159,8 @@ def parse_parser_file(filepath: str) -> List[Dict[str, Any]]:
             if isinstance(item, ast.Assign):
                 for target in item.targets:
                     if isinstance(target, ast.Name) and target.id in (
-                        "NAME", "DESCRIPTION", "PREMIUM", "PIC", "PATH", "COLUMNS"
+                        "NAME", "DESCRIPTION", "META_TITLE", "META_DESC",
+                        "PREMIUM", "PIC", "PATH", "COLUMNS"
                     ):
                         value = extract_ast_value(item.value)
                         parser_data[target.id] = value
@@ -457,9 +460,21 @@ def generate_parser_page(parser: Dict[str, Any], template: str) -> str:
     columns = parser.get("COLUMNS", [])
 
     short_name = name_parts["title"] if name_parts["title"] else full_name
-    title_text = f"{short_name} - Анализ смет"
-    meta_desc_plain = re.sub(r'<[^>]+>', '', description) if description else ""
-    meta_desc = meta_desc_plain[:160] if meta_desc_plain else f"Описание парсера {full_name}"
+
+    # META_TITLE: приоритет у явно заданного, иначе формируем из NAME
+    meta_title = parser.get("META_TITLE", "")
+    if meta_title:
+        title_text = meta_title
+    else:
+        title_text = f"{short_name} - Анализ смет"
+
+    # META_DESC: приоритет у явно заданного, иначе берём обрезанный DESCRIPTION
+    meta_desc_raw = parser.get("META_DESC", "")
+    if meta_desc_raw:
+        meta_desc = meta_desc_raw[:160]
+    else:
+        meta_desc_plain = re.sub(r'<[^>]+>', '', description) if description else ""
+        meta_desc = meta_desc_plain[:160] if meta_desc_plain else f"Описание парсера {full_name}"
     premium_badge = ' <i class="bi bi-star-fill text-warning"></i>' if premium else ""
 
     # Полный путь: PATH + "/" + NAME
@@ -542,7 +557,7 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
     {YANDEX_METRIKA}
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="icon" type="image/x-icon" href="icon.ico">
-    <title>Парсеры - Анализ смет</title>
+    <title>Парсеры смет ГРАНД-Смета (.gsfx) - программа «Анализ смет»</title>
     <meta name="description" content="Каталог парсеров приложения Анализ смет. Все доступные парсеры для анализа файлов ГРАНД-Смета (.gsfx).">
 
     <!-- Bootstrap 5 CSS -->
@@ -933,6 +948,8 @@ def main():
         "class_name": p["class_name"],
         "NAME": p["NAME"],
         "DESCRIPTION": p.get("DESCRIPTION", ""),
+        "META_TITLE": p.get("META_TITLE", ""),
+        "META_DESC": p.get("META_DESC", ""),
         "PREMIUM": p.get("PREMIUM", False),
         "PIC": p.get("PIC"),
         "PATH": p.get("PATH", ""),

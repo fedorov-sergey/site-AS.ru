@@ -1,7 +1,6 @@
 # Анализ смет - Официальный сайт
 
 🌐 **Сайт:** <a href="https://fedorov-sergey.github.io/pznrsp/" target="_blank" rel="noopener noreferrer">открыть сайт</a>  
-💚 **Boosty:** <a href="#" target="_blank" rel="noopener noreferrer">поддержать на Boosty</a>  
 📱 **Приложение:** Анализ смет для Windows и Linux
 
 ---

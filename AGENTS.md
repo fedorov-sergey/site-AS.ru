@@ -112,6 +112,40 @@ MAX:    https://max.ru/u/f9LHodD0cOLlpPKGoBu8A6OrkYpVY8PBkFTfiy13grGgop0LayfDi5d
     ```
 18. При создании в проекте новых папок или файлов — **всегда задумываться о `robots.txt`**: если папка/файл служебные и не должны попадать в поиск, добавить правило `Disallow` в `robots.txt`.
 
+### Мета-теги для парсеров
+
+19. Каждый Python-класс парсера должен содержать атрибуты `META_TITLE` и `META_DESC` (рядом с `NAME` и `DESCRIPTION`).
+20. `META_TITLE` — заголовок страницы парсера для SEO (65–70 символов с пробелами).
+21. `META_DESC` — краткое описание страницы парсера для поисковика (до 150–170 символов).
+22. При добавлении **нового** парсера — задавать `META_TITLE` и `META_DESC` явно. Если не заданы — `generate.py` подставит значения по умолчанию (из `NAME`/`DESCRIPTION`).
+23. При добавлении нового парсера — **спрашивать у пользователя** значения `META_TITLE` и `META_DESC`, если они не указаны в коде парсера.
+
+### Мета-теги для остальных страниц
+
+24. При создании **новой** страницы сайта (не парсера) — **всегда запрашивать у пользователя** `<title>` и `<meta name="description">`. Не генерировать автоматически.
+25. При использовании `generate.py` для генерации страниц — если в шаблоне нет `META_TITLE`/`META_DESC`, ставить пользователя в известность и запрашивать значения.
+26. Все **статические** страницы (index, rate, pay, videos, parsers, 404, error и т.п.) — при **создании новой или изменении существующей** обязательно выводить их `<title>` (в формате `NAME`) и `<meta name="description">` (в формате `DESCRIPTION`) в файл `SEO_statik.txt`. Файл `SEO_statik.txt` — служебный (в корне сайта), закрыт от индексации в `robots.txt`.
+
+### SEO_statik.txt
+
+Файл `SEO_statik.txt` находится в корне сайта `C:\Users\PC\Desktop\Сайт 260907\SEO_statik.txt` и содержит заголовки и описания всех статических страниц. Формат:
+
+```
+[index.html]
+NAME = <title страницы>
+DESCRIPTION = <meta name="description" страницы>
+
+[rate.html]
+NAME = <title страницы>
+DESCRIPTION = <meta name="description" страницы>
+...
+```
+
+Правила:
+- Обновлять файл при **любом** изменении `<title>` или `<meta name="description">` статической страницы.
+- Добавлять новую секцию `[имя_файла.html]` при создании новой статической страницы.
+- Файл `SEO_statik.txt` служебный и должен быть закрыт от индексации в `robots.txt` (`Disallow: /SEO_statik.txt`).
+
 ## Аналитика (Яндекс Метрика)
 
 19. На **каждой** странице сайта должен быть код счётчика Яндекс Метрики (ID `111697118`). Он вставляется в `<head>` сразу после `<meta name="viewport">` — как можно ближе к началу страницы.
@@ -121,34 +155,6 @@ MAX:    https://max.ru/u/f9LHodD0cOLlpPKGoBu8A6OrkYpVY8PBkFTfiy13grGgop0LayfDi5d
     - каталог `parsers.html` — вставляется через `generate_catalog_page` в `build/generate.py` (константа `YANDEX_METRIKA`).
 21. При создании **новой** страницы — обязательно добавлять код счётчика в её `<head>` (вручную или через шаблон).
 22. Файл верификации `yandex_3b77755ac8d47a10.html` не удалять и не изменять.
-
-Код счётчика (использовать везде одинаково):
-
-```
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111697118', 'ym');
-
-    ym(111697118, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/111697118" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-```
-
-## Аналитика (Яндекс Метрика)
-
-17. На **каждой** странице сайта должен быть код счётчика Яндекс Метрики (ID `111697118`). Он вставляется в `<head>` сразу после `<meta name="viewport">` — как можно ближе к началу страницы.
-18. Уже подключённые места:
-    - статические страницы: `index.html`, `videos.html`, `rate.html`, `pay.html`, `404.html` — вставлен вручную;
-    - страницы парсеров `parsers/*.html` — вставляется через `build/template_parser.html`;
-    - каталог `parsers.html` — вставляется через `generate_catalog_page` в `build/generate.py` (константа `YANDEX_METRIKA`).
-19. При создании **новой** страницы — обязательно добавлять код счётчика в её `<head>` (вручную или через шаблон).
-20. Файл верификации `yandex_3b77755ac8d47a10.html` не удалять и не изменять.
 
 Код счётчика (использовать везде одинаково):
 
@@ -197,7 +203,7 @@ python generate.py
 ### Что делает скрипт
 
 1. Сканирует `.py` файлы парсеров из исходного кода приложения
-2. Извлекает метаданные через `ast`: NAME, DESCRIPTION, PREMIUM, PIC, PATH, COLUMNS
+2. Извлекает метаданные через `ast`: NAME, DESCRIPTION, META_TITLE, META_DESC, PREMIUM, PIC, PATH, COLUMNS
 3. Сохраняет промежуточный `parsers.json`
 4. Генерирует HTML из шаблона, подставляя данные
 5. Копирует скриншоты в `parsers/pic/`
@@ -209,7 +215,7 @@ python generate.py
 - Путь: `C:\Users\PC\Desktop\76 кл5\core\parsers`
 - Скриншоты: `C:\Users\PC\Desktop\76 кл5\core\parsers\pic`
 - Структура: каждый файл — 1 класс, наследует BaseParser
-- Атрибуты: NAME, DESCRIPTION, PREMIUM, PIC, PATH, COLUMNS
+- Атрибуты: NAME, DESCRIPTION, META_TITLE, META_DESC, PREMIUM, PIC, PATH, COLUMNS
 - slug страницы = имя .py файла без расширения (например `LP17_Koeff_parsers`)
 
 ## Служебные страницы (папка `legal/`)

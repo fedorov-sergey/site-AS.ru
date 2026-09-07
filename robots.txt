@@ -1,13 +1,16 @@
 User-agent: Yandex
 Disallow: /build/
 Disallow: /legal/
+Disallow: /SEO_statik.txt
 
 User-agent: Googlebot
 Disallow: /build/
 Disallow: /legal/
+Disallow: /SEO_statik.txt
 
 User-agent: *
 Disallow: /build/
 Disallow: /legal/
+Disallow: /SEO_statik.txt
 
 Sitemap: https://analizsmet.ru/sitemap.xml

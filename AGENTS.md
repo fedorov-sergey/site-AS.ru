@@ -60,6 +60,7 @@ YouTube:    https://www.youtube.com/@pznrsp
 ВК Видео:   https://vkvideo.ru/@pznrsp
 Дзен:       https://dzen.ru/pznrsp
 RuTube:     https://rutube.ru/channel/8968994
+MAX:        https://max.ru/channel_analizsmet
 ```
 
 ## SEO

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="icon" type="image/x-icon" href="../icon.ico">
+    <title>Блок: Краткий обзор программы</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f8f9fa; }
+
+        /* Карточка видео с «каплей»-тенью */
+        .video-card {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .video-card .ratio {
+            position: relative;
+            z-index: 1;
+        }
+        .video-drop {
+            display: block;
+            width: 100%;
+            margin: -2px auto 0;
+            padding: 0.55rem 0.75rem 0.7rem;
+            border-radius: 0 0 10px 10px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            text-decoration: none;
+            z-index: 0;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+            transition: filter .2s;
+        }
+        .video-drop:hover {
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+            color: #fff;
+        }
+        .drop-youtube { background: linear-gradient(180deg, #FF0000 0%, #cc0000 100%); }
+        .drop-vk      { background: linear-gradient(180deg, #4680C2 0%, #3668a0 100%); }
+        .drop-dzen    { background: linear-gradient(180deg, #333 0%, #1a1a1a 100%); }
+
+        /* Кнопки площадок на мобильных */
+        .btn-platform {
+            border-radius: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: transform .15s, box-shadow .15s;
+        }
+        .btn-platform:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        .btn-youtube { background: #FF0000; color: #fff; }
+        .btn-vk      { background: #4680C2; color: #fff; }
+        .btn-dzen    { background: #1a1a1a; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <!-- ===== БЛОК: КРАТКИЙ ОБЗОР ПРОГРАММЫ ===== -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-3 fw-bold">Краткий обзор программы</h2>
+            <p class="mb-4 text-muted">Посмотри видео на любимой площадке</p>
+
+            <div class="row g-4 justify-content-center mt-2">
+                <!-- YouTube -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card text-center">
+                        <div class="d-none d-md-block">
+                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                                <iframe
+                                    src="https://www.youtube.com/embed/LsaKAyhOBzQ"
+                                    title="Видео на YouTube"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                    class="rounded">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="d-md-none">
+                            <a href="https://youtu.be/LsaKAyhOBzQ" target="_blank" rel="noopener" class="btn btn-platform btn-youtube btn-lg w-100 py-3 shadow-sm">
+                                <i class="bi bi-play-circle-fill"></i> Смотреть на YouTube
+                            </a>
+                        </div>
+                        <a href="https://www.youtube.com/@pznrsp" target="_blank" rel="noopener" class="video-drop drop-youtube d-none d-md-block">YouTube</a>
+                    </div>
+                </div>
+                <!-- VK Видео -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card text-center">
+                        <div class="d-none d-md-block">
+                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                                <iframe
+                                    src="https://vk.com/video_ext.php?oid=-205607454&id=456239039&hd=2"
+                                    title="Видео ВКонтакте"
+                                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock"
+                                    allowfullscreen
+                                    class="rounded">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="d-md-none">
+                            <a href="https://vkvideo.ru/video-205607454_456239039" target="_blank" rel="noopener" class="btn btn-platform btn-vk btn-lg w-100 py-3 shadow-sm">
+                                <i class="bi bi-play-circle-fill"></i> Смотреть на ВК Видео
+                            </a>
+                        </div>
+                        <a href="https://vkvideo.ru/@pznrsp" target="_blank" rel="noopener" class="video-drop drop-vk d-none d-md-block">ВК Видео</a>
+                    </div>
+                </div>
+                <!-- Дзен -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="video-card text-center">
+                        <div class="d-none d-md-block">
+                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                                <iframe
+                                    src="https://dzen.ru/embed/o4ka-v1wPAAA?from_block=partner&from=zen&mute=1&autoplay=0&tv=0"
+                                    title="Видео на Дзен"
+                                    allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media"
+                                    allowfullscreen
+                                    class="rounded">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="d-md-none">
+                            <a href="https://dzen.ru/video/watch/6a9dbd8b1a2349436987605b" target="_blank" rel="noopener" class="btn btn-platform btn-dzen btn-lg w-100 py-3 shadow-sm">
+                                <i class="bi bi-play-circle-fill"></i> Смотреть на Дзен
+                            </a>
+                        </div>
+                        <a href="https://dzen.ru/pznrsp" target="_blank" rel="noopener" class="video-drop drop-dzen d-none d-md-block">Дзен</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -147,6 +147,93 @@
         .btn-youtube { background: #FF0000; color: #fff; }
         .btn-vk      { background: #4680C2; color: #fff; }
         .btn-dzen    { background: #1a1a1a; color: #fff; }
+
+        /* --- Модальные окна «Что делать дальше» (скачивание) --- */
+        .dl-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 10px 0;
+        }
+        .dl-step:not(:last-child) {
+            border-bottom: 1px solid #e9ecef;
+        }
+        .dl-step-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .dl-step-text {
+            flex: 1;
+            padding-top: 4px;
+        }
+        .cmd-copy {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: #f5f5f5;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 8px 8px 8px 12px;
+            margin-top: 6px;
+        }
+        .cmd-copy code {
+            font-size: 0.85rem;
+            word-break: break-all;
+            user-select: all;
+        }
+        .cmd-copy .btn {
+            flex-shrink: 0;
+            line-height: 1;
+            padding: 6px 8px;
+        }
+        .code-file {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            background: #f5f5f5;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 1px 6px;
+        }
+        /* Кнопки мессенджеров внутри модалок (не конфликтуют с .btn-vk на видео) */
+        .modal .btn-vk {
+            background-color: #4C75A3;
+            border-color: #4C75A3;
+            color: white;
+        }
+        .modal .btn-vk:hover {
+            background-color: #3d5f85;
+            border-color: #3d5f85;
+            color: white;
+        }
+        .modal .btn-telegram {
+            background-color: #2AABEE;
+            border-color: #2AABEE;
+            color: white;
+        }
+        .modal .btn-telegram:hover {
+            background-color: #229ed9;
+            border-color: #229ed9;
+            color: white;
+        }
+        .modal .btn-max {
+            background-color: #E41E3F;
+            border-color: #E41E3F;
+            color: white;
+        }
+        .modal .btn-max:hover {
+            background-color: #c21b38;
+            border-color: #c21b38;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -198,14 +285,12 @@
             
             <!-- Кнопки скачивания -->
             <div class="d-grid gap-3 d-md-flex justify-content-md-center mt-4">
-                <!-- ЗАМЕНИ # НА ССЫЛКУ GOOGLE ДИСК ДЛЯ WINDOWS -->
-                <a href="https://disk.yandex.ru/d/BluAT4XI5_vnaA" class="btn btn-light btn-lg px-4 me-md-2 shadow">
+                <button type="button" class="btn btn-light btn-lg px-4 me-md-2 shadow" onclick="showDownloadHelp('win')">
                     <i class="bi bi-windows"></i> Скачать для Windows
-                </a>
-                <!-- ЗАМЕНИ # НА ССЫЛКУ GOOGLE ДИСК ДЛЯ LINUX -->
-                <a href="https://disk.yandex.ru/d/O8oR1Wb4upFbDg" class="btn btn-outline-light btn-lg px-4 shadow">
+                </button>
+                <button type="button" class="btn btn-outline-light btn-lg px-4 shadow" onclick="showDownloadHelp('linux')">
                     <i class="bi bi-ubuntu"></i> Скачать для Linux
-                </a>
+                </button>
             </div>
 
             <!-- БЛОК СОЦСЕТЕЙ -->
@@ -246,7 +331,7 @@
     <!-- ===== КРАТКИЙ ОБЗОР ПРОГРАММЫ (3 видео) ===== -->
     <section class="py-5">
         <div class="container text-center">
-            <h2 class="mb-3 fw-bold">Краткий обзор программы</h2>
+            <h2 class="mb-3 fw-bold">Как устранять замечания за минуты</h2>
             <p class="mb-4 text-muted">Посмотри видео на любимой площадке</p>
 
             <div class="row g-4 justify-content-center mt-2">
@@ -423,6 +508,133 @@
         </div>
     </div>
 
+    <!-- ===== МОДАЛЬНОЕ ОКНО «ЧТО ДЕЛАТЬ ДАЛЬШЕ» ДЛЯ WINDOWS ===== -->
+    <div class="modal fade" id="downloadModalWin" tabindex="-1" aria-labelledby="downloadModalWinLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="downloadModalWinLabel">
+                        <i class="bi bi-windows text-primary"></i> Что делать дальше (Windows)
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="dl-step">
+                        <span class="dl-step-num">1</span>
+                        <div class="dl-step-text">
+                            <strong>Нажми на <a href="https://disk.yandex.ru/d/BluAT4XI5_vnaA" target="_blank" rel="noopener">ссылку</a>, перейдёшь на «Яндекс.Диск»</strong>
+                            <div class="text-muted small">Скачай файл и зайди в папку «Загрузки».</div>
+                        </div>
+                    </div>
+                    <div class="dl-step">
+                        <span class="dl-step-num">2</span>
+                        <div class="dl-step-text">
+                            <strong>Распакуй архив и запусти</strong>
+                            <div class="text-muted small">Открой архив и распакуй его в папку. Можно запустить и прямо из архива, нажав на <span class="code-file">analizsmet.ru.exe</span>.</div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <p class="text-muted small mb-2">Не получается? Напишите разработчику:</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <a href="https://vk.ru/fedorov_jr" class="btn btn-vk btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-chat-dots-fill"></i> ВК
+                            </a>
+                            <a href="https://t.me/fedorov_jr" class="btn btn-telegram btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-telegram"></i> TG
+                            </a>
+                            <a href="https://max.ru/u/f9LHodD0cOLlpPKGoBu8A6OrkYpVY8PBkFTfiy13grGgop0LayfDi5dEfvU" class="btn btn-max btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-chat-fill"></i> MAX
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="videos.html" class="btn btn-outline-primary" target="_blank" rel="noopener">
+                        <i class="bi bi-play-circle"></i> Видео-инструкция
+                    </a>
+                    <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== МОДАЛЬНОЕ ОКНО «ЧТО ДЕЛАТЬ ДАЛЬШЕ» ДЛЯ LINUX ===== -->
+    <div class="modal fade" id="downloadModalLinux" tabindex="-1" aria-labelledby="downloadModalLinuxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="downloadModalLinuxLabel">
+                        <i class="bi bi-ubuntu text-primary"></i> Что делать дальше (Linux)
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="dl-step">
+                        <span class="dl-step-num">1</span>
+                        <div class="dl-step-text">
+                            <strong>Нажми на <a href="https://disk.yandex.ru/d/O8oR1Wb4upFbDg" target="_blank" rel="noopener">ссылку</a>, перейдёшь на «Яндекс.Диск»</strong>
+                            <div class="text-muted small">Скачай файл и зайди в папку «Загрузки».</div>
+                        </div>
+                    </div>
+                    <div class="dl-step">
+                        <span class="dl-step-num">2</span>
+                        <div class="dl-step-text">
+                            <strong>Сделай файл исполняемым</strong>
+                            <div class="text-muted small">Убедись, что файл расположен у тебя на компьютере, а не на сетевом диске или флешке. Открой терминал (Alt+Shift+F4) и выполни команду:</div>
+                            <div class="cmd-copy">
+                                <code>chmod +x analizsmet.ru.appimage</code>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" title="Копировать"
+                                        onclick="copyCommand(this, 'chmod +x analizsmet.ru.appimage')">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dl-step">
+                        <span class="dl-step-num">3</span>
+                        <div class="dl-step-text">
+                            <strong>Запусти файл из проводника</strong>
+                            <div class="text-muted small">Если возникнут проблемы — допиши в терминале и отправь появившийся текст разработчику:</div>
+                            <div class="cmd-copy">
+                                <code>./analizsmet.ru.appimage</code>
+                                <button type="button" class="btn btn-outline-secondary btn-sm" title="Копировать"
+                                        onclick="copyCommand(this, './analizsmet.ru.appimage')">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <p class="text-muted small mb-2">Не получается? Напишите разработчику:</p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <a href="https://vk.ru/fedorov_jr" class="btn btn-vk btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-chat-dots-fill"></i> ВК
+                            </a>
+                            <a href="https://t.me/fedorov_jr" class="btn btn-telegram btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-telegram"></i> TG
+                            </a>
+                            <a href="https://max.ru/u/f9LHodD0cOLlpPKGoBu8A6OrkYpVY8PBkFTfiy13grGgop0LayfDi5dEfvU" class="btn btn-max btn-sm" target="_blank" rel="noopener">
+                                <i class="bi bi-chat-fill"></i> MAX
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="videos.html" class="btn btn-outline-primary" target="_blank" rel="noopener">
+                        <i class="bi bi-play-circle"></i> Видео-инструкция
+                    </a>
+                    <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== ПРЕИМУЩЕСТВА ===== -->
     <section class="py-5 bg-light">
         <div class="container text-center">
@@ -439,7 +651,7 @@
                     <div class="p-3">
                         <i class="bi bi-shield-lock-fill display-4 text-success"></i>
                         <h5 class="mt-3">Безопасность</h5>
-                        <p class="text-muted small">Не требует интернета. Все вычисления локально — ваши данные под защитой.</p>
+                        <p class="text-muted small">Программа не отправляет ваши файлы в интернет. Всё считается на вашем компьютере.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -478,6 +690,22 @@
     <script>
         function setModalImg(el) {
             document.getElementById('stepModalImg').src = el.src;
+        }
+
+        // Показ нужного окна «Что делать дальше» при клике на кнопку скачивания.
+        function showDownloadHelp(platform) {
+            var id = platform === 'linux' ? 'downloadModalLinux' : 'downloadModalWin';
+            bootstrap.Modal.getOrCreateInstance(document.getElementById(id)).show();
+        }
+
+        // Копирование команды в буфер обмена.
+        function copyCommand(btn, text) {
+            navigator.clipboard.writeText(text).then(function() {
+                btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+                setTimeout(function() {
+                    btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+                }, 2000);
+            });
         }
     </script>
 </body>

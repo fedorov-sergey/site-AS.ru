@@ -31,13 +31,13 @@ from collections import OrderedDict
 BUILD_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Путь к папке с .py файлами парсеров========================================ВСТАВИТЬ===============
-PARSERS_DIR = r"C:\Users\PC\Desktop\Сайт 260907\parsers Удалить при публикации"
+PARSERS_DIR = r"C:\Users\fedor\Downloads\Сайт 260912\parsers Удалить при публикации"
 
 # Путь к папке со скриншотами
 PIC_DIR = os.path.join(PARSERS_DIR, "pic")
 
 # Путь к сайту (куда генерировать HTML)========================================ВСТАВИТЬ===============
-SITE_DIR = r"C:\Users\PC\Desktop\Сайт 260907"
+SITE_DIR = r"C:\Users\fedor\Downloads\Сайт 260912"
 
 # Папка для страниц парсеров (относительно SITE_DIR)
 PARSERS_OUTPUT_DIR = os.path.join(SITE_DIR, "parsers")
@@ -681,8 +681,8 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
                             <a class="nav-link" href="videos.html">Помощь</a>
                         </li>
                         <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
-                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="rate.html">
-                                Тарифы
+                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="index.html" target="_blank" rel="noopener">
+                                Скачать
                             </a>
                         </li>
                     </ul>

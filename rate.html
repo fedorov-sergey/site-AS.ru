@@ -30,6 +30,9 @@
         body {
             background-color: #f8f9fa;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         .page-header {
             background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
             color: white;
@@ -109,6 +112,7 @@
         .alert-instruction {
             background: #fff;
             border-left: 5px solid #0d6efd;
+            scroll-margin-top: 90px;
         }
 
         /* Тарифы */
@@ -120,6 +124,9 @@
             border: 2px solid #e9ecef;
             transition: transform 0.2s, box-shadow 0.2s;
             position: relative;
+            cursor: pointer;
+            display: block;
+            color: inherit;
         }
         .tariff-card:hover {
             transform: translateY(-4px);
@@ -317,8 +324,8 @@
                             <a class="nav-link" href="videos.html">Помощь</a>
                         </li>
                         <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
-                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="rate.html">
-                                Тарифы
+                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="index.html" target="_blank" rel="noopener">
+                                Скачать
                             </a>
                         </li>
                     </ul>
@@ -350,30 +357,30 @@
 
                 <!-- 30 дней -->
                 <div class="col-md-4 col-sm-4">
-                    <div class="tariff-card h-100">
+                    <a href="#how-to" class="tariff-card h-100 text-decoration-none">
                         <div class="tariff-period">30 дней</div>
-                        <div class="tariff-price">500 <span>руб.</span></div>
-                        <div class="tariff-per-day">~16,67 руб./день</div>
-                    </div>
+                        <div class="tariff-price">690 <span>руб.</span></div>
+                        <div class="tariff-per-day">23 руб./день</div>
+                    </a>
                 </div>
 
                 <!-- 60 дней -->
                 <div class="col-md-4 col-sm-4">
-                    <div class="tariff-card h-100">
+                    <a href="#how-to" class="tariff-card h-100 text-decoration-none">
                         <div class="tariff-period">60 дней</div>
-                        <div class="tariff-price">800 <span>руб.</span></div>
-                        <div class="tariff-per-day">~13,33 руб./день</div>
-                    </div>
+                        <div class="tariff-price">1 190 <span>руб.</span></div>
+                        <div class="tariff-per-day">~19,83 руб./день</div>
+                    </a>
                 </div>
 
                 <!-- 90 дней — рекомендуемый -->
                 <div class="col-md-4 col-sm-4">
-                    <div class="tariff-card recommended h-100">
+                    <a href="#how-to" class="tariff-card recommended h-100 text-decoration-none">
                         <div class="tariff-badge">Выгодно</div>
                         <div class="tariff-period">90 дней</div>
-                        <div class="tariff-price">990 <span>руб.</span></div>
-                        <div class="tariff-per-day">11 руб./день</div>
-                    </div>
+                        <div class="tariff-price">1 490 <span>руб.</span></div>
+                        <div class="tariff-per-day">~16,56 руб./день</div>
+                    </a>
                 </div>
 
             </div>
@@ -405,13 +412,13 @@
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="calc-result">
-                            <div class="calc-result-value highlight" id="payoffTime">0,3 дня</div>
+                            <div class="calc-result-value highlight" id="payoffTime">0,5 дня</div>
                             <div class="calc-result-label">окупаемость</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="calc-result">
-                            <div class="calc-result-value" id="freeDays">89,7 дней</div>
+                            <div class="calc-result-value" id="freeDays">89,5 дней</div>
                             <div class="calc-result-label">бесплатно</div>
                         </div>
                     </div>
@@ -419,13 +426,13 @@
 
                 <div class="calc-verdict">
                     <div class="calc-verdict-text">
-                        Программа окупится за <strong id="verdictPayoff">0,3 дня</strong>, а оставшиеся <strong id="verdictFree">89,7 дней</strong> ты работаешь бесплатно
+                        Программа окупится за <strong id="verdictPayoff">0,5 дня</strong>, а оставшиеся <strong id="verdictFree">89,5 дней</strong> ты работаешь бесплатно
                     </div>
                 </div>
             </div>
 
             <!-- Инструкция -->
-            <div class="card shadow-sm alert-instruction">
+            <div class="card shadow-sm alert-instruction" id="how-to">
                 <div class="card-body p-4">
                     <h5 class="mb-4"><i class="bi bi-list-ol text-primary"></i> Как оформить подписку</h5>
 
@@ -433,7 +440,7 @@
                         <span class="step-number">1</span>
                         <div class="step-text">
                             <h5>Скачайте приложение</h5>
-                            <p class="text-muted mb-0">Перейдите на <a href="index.html">главную страницу</a> и скачайте приложение для вашей операционной системы (Windows или Linux).</p>
+                            <p class="text-muted mb-0">Перейдите на <a href="index.html" target="_blank" rel="noopener">главную страницу</a> и скачайте приложение для Windows или Linux.</p>
                         </div>
                     </div>
 
@@ -441,7 +448,7 @@
                         <span class="step-number">2</span>
                         <div class="step-text">
                             <h5>Откройте окно «Лицензия»</h5>
-                            <p class="text-muted mb-0">Запустите приложение и откройте окно «Лицензия» через меню «Справка» в верхней панели.</p>
+                            <p class="text-muted mb-0">Запустите приложение и откройте окно «Лицензия» через меню «Справка».</p>
                         </div>
                     </div>
 
@@ -514,7 +521,7 @@
             var freeEl = document.getElementById('freeDays');
             var verdictPayoff = document.getElementById('verdictPayoff');
             var verdictFree = document.getElementById('verdictFree');
-            var cost = 990;
+            var cost = 1490;
             var subscriptionDays = 90;
 
             function formatNumber(n) {

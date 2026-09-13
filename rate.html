@@ -337,8 +337,8 @@
     <!-- ЗАГОЛОВОК -->
     <section class="page-header text-center">
         <div class="container">
-            <h1 class="display-5 fw-bold mb-3">Тарифы</h1>
-            <p class="lead mb-0">Выбери тариф и начни экономить время</p>
+            <h1 class="display-5 fw-bold mb-3">Сколько стоит быстрая проверка смет</h1>
+            <p class="lead mb-0">Все тарифы — с 5-дневным бесплатным доступом. Платите только если понравится</p>
         </div>
     </section>
 
@@ -378,8 +378,8 @@
                     <a href="#how-to" class="tariff-card recommended h-100 text-decoration-none">
                         <div class="tariff-badge">Выгодно</div>
                         <div class="tariff-period">90 дней</div>
-                        <div class="tariff-price">1 490 <span>руб.</span></div>
-                        <div class="tariff-per-day">~16,56 руб./день</div>
+                        <div class="tariff-price">1 470 <span>руб.</span></div>
+                        <div class="tariff-per-day">~16,33 руб./день</div>
                     </a>
                 </div>
 
@@ -395,43 +395,29 @@
                         <span>30 000</span>
                         <span>150 000</span>
                     </div>
-                    <input type="range" id="salarySlider" min="30000" max="150000" step="5000" value="60000">
+                    <input type="range" id="salarySlider" min="30000" max="150000" step="5000" value="70000">
                 </div>
 
                 <div class="salary-display">
                     <small>Ваша зарплата:</small><br>
-                    <span id="salaryValue">60 000</span> <small>руб./мес.</small>
+                    <span id="salaryValue">70 000</span> <small>руб./мес.</small>
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <div class="calc-result">
-                            <div class="calc-result-value" id="dailyRate">3 000</div>
+                            <div class="calc-result-value" id="dailyRate">3 500</div>
                             <div class="calc-result-label">руб. в день</div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <div class="calc-result">
-                            <div class="calc-result-value highlight" id="payoffTime">0,5 дня</div>
+                            <div class="calc-result-value highlight" id="payoffTime">3 часа</div>
                             <div class="calc-result-label">окупаемость</div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="calc-result">
-                            <div class="calc-result-value" id="freeDays">89,5 дней</div>
-                            <div class="calc-result-label">бесплатно</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="calc-verdict">
-                    <div class="calc-verdict-text">
-                        Программа окупится за <strong id="verdictPayoff">0,5 дня</strong>, а оставшиеся <strong id="verdictFree">89,5 дней</strong> ты работаешь бесплатно
-                    </div>
                 </div>
             </div>
-
-            <!-- Инструкция -->
             <div class="card shadow-sm alert-instruction" id="how-to">
                 <div class="card-body p-4">
                     <h5 class="mb-4"><i class="bi bi-list-ol text-primary"></i> Как оформить подписку</h5>
@@ -440,7 +426,7 @@
                         <span class="step-number">1</span>
                         <div class="step-text">
                             <h5>Скачайте приложение</h5>
-                            <p class="text-muted mb-0">Перейдите на <a href="index.html" target="_blank" rel="noopener">главную страницу</a> и скачайте приложение для Windows или Linux.</p>
+                            <p class="text-muted mb-0">Перейдите на <a href="index.html" target="_blank" rel="noopener">главную страницу</a> и скачайте приложение.</p>
                         </div>
                     </div>
 
@@ -460,11 +446,19 @@
                         </div>
                     </div>
 
-                    <div class="step-item border-0">
+                    <div class="step-item">
                         <span class="step-number">4</span>
                         <div class="step-text">
                             <h5>Скопируйте ID и свяжитесь с разработчиком</h5>
                             <p class="text-muted mb-0">На открывшейся странице скопируйте ID компьютера и отправьте его разработчику в любом удобном мессенджере.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item border-0">
+                        <span class="step-number">5</span>
+                        <div class="step-text">
+                            <h5>Оплатите подписку и получите код активации</h5>
+                            <p class="text-muted mb-0">Разработчик пришлёт реквизиты или ссылку на оплату. После оплаты вы получите код активации.</p>
                         </div>
                     </div>
                 </div>
@@ -472,7 +466,7 @@
 
             <!-- Кнопки соцсетей -->
             <div class="text-center mt-4">
-                <h5 class="mb-3">Напишите разработчику</h5>
+                <h5 class="mb-3">Поздравляем, вы почти у цели!</h5>
                 <p class="text-muted small mb-3">Выберите удобный мессенджер и отправьте скопированный ID</p>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <a href="https://vk.ru/fedorov_jr" class="btn btn-vk btn-lg" target="_blank">
@@ -518,18 +512,10 @@
             var salaryEl = document.getElementById('salaryValue');
             var dailyEl = document.getElementById('dailyRate');
             var payoffEl = document.getElementById('payoffTime');
-            var freeEl = document.getElementById('freeDays');
-            var verdictPayoff = document.getElementById('verdictPayoff');
-            var verdictFree = document.getElementById('verdictFree');
-            var cost = 1490;
-            var subscriptionDays = 90;
+            var cost = 1470;
 
             function formatNumber(n) {
                 return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-            }
-
-            function formatDecimal(n) {
-                return n.toFixed(1).replace('.', ',');
             }
 
             function update() {
@@ -542,29 +528,23 @@
                 // Зарплата в день (20 рабочих дней)
                 var daily = salary / 20;
 
-                // Дни окупаемости
-                var payoffDays = cost / daily;
-                var freeDays = subscriptionDays - payoffDays;
+                // Часы окупаемости (8 часов в рабочем дне, округление до целого часа)
+                var payoffHours = Math.round(cost / (daily / 8));
 
                 // Формат вывода
                 salaryEl.textContent = formatNumber(salary);
                 dailyEl.textContent = formatNumber(Math.round(daily));
 
-                payoffEl.textContent = formatDecimal(payoffDays) + ' ' + pluralDays(payoffDays);
-                freeEl.textContent = formatDecimal(freeDays) + ' ' + pluralDays(freeDays);
-
-                verdictPayoff.textContent = formatDecimal(payoffDays) + ' ' + pluralDays(payoffDays);
-                verdictFree.textContent = formatDecimal(freeDays) + ' ' + pluralDays(freeDays);
+                payoffEl.textContent = formatNumber(payoffHours) + ' ' + pluralHours(payoffHours);
             }
 
-            function pluralDays(n) {
-                if (n < 1) return 'дня';
+            function pluralHours(n) {
                 var d = Math.abs(n) % 100;
                 var n1 = n % 10;
-                if (d > 10 && d < 20) return 'дней';
-                if (n1 === 1) return 'день';
-                if (n1 >= 2 && n1 <= 4) return 'дня';
-                return 'дней';
+                if (d > 10 && d < 20) return 'часов';
+                if (n1 === 1) return 'час';
+                if (n1 >= 2 && n1 <= 4) return 'часа';
+                return 'часов';
             }
 
             slider.addEventListener('input', update);

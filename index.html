@@ -148,6 +148,32 @@
         .btn-vk      { background: #4680C2; color: #fff; }
         .btn-dzen    { background: #1a1a1a; color: #fff; }
 
+        /* --- Превью видео (ленивая загрузка: iframe подставляется по клику) --- */
+        .video-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0;
+            border: 0;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            background-image: linear-gradient(rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 100%), url('index_video.png');
+            background-size: cover;
+            background-position: center;
+            transition: filter .2s;
+        }
+        .video-preview:hover {
+            filter: brightness(1.1);
+        }
+        .video-preview .bi-play-circle-fill {
+            font-size: 3rem;
+            line-height: 1;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,.5));
+        }
+
         /* --- Модальные окна «Что делать дальше» (скачивание) --- */
         .dl-step {
             display: flex;
@@ -280,8 +306,13 @@
     <!-- ГЛАВНЫЙ ЭКРАН -->
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3 text-uppercase">Анализ смет</h1>
-            <p class="lead mb-4">Быстро и точно проверяйте сотни файлов ГРАНД-Сметы.<br>Работает без установки — скачай и запускай!</p>
+            <h1 class="display-5 fw-bold mb-3"><span class="text-uppercase">Замечания к сметам</span><br>больше не ваша головная боль</h1>
+            <p class="lead mb-2">Отработай ошибки в 100 сметах за минуты, а не за дни.</p>
+            <p class="mb-4">
+                <span class="badge bg-light text-dark">160+ параметров ГРАНД-Сметы</span>
+                <span class="badge bg-light text-dark">5 дней бесплатно</span>
+                <span class="badge bg-light text-dark">подписка от 490 ₽/мес</span>
+            </p>
             
             <!-- Кнопки скачивания -->
             <div class="d-grid gap-3 d-md-flex justify-content-md-center mt-4">
@@ -291,20 +322,6 @@
                 <button type="button" class="btn btn-outline-light btn-lg px-4 shadow" onclick="showDownloadHelp('linux')">
                     <i class="bi bi-ubuntu"></i> Скачать для Linux
                 </button>
-            </div>
-
-            <!-- БЛОК СОЦСЕТЕЙ -->
-            <div class="mt-5 pt-3">
-                <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 1px;">Следите за обновлениями</p>
-                <div class="social-links-row">
-                    <a href="https://t.me/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Telegram</a>
-                    <a href="https://vk.com/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК</a>
-                    <a href="https://max.ru/channel_analizsmet" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">MAX</a>
-                    <a href="https://dzen.ru/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Дзен</a>
-                    <a href="https://www.youtube.com/@pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">YouTube</a>
-                    <a href="https://vkvideo.ru/@pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК Видео</a>
-                    <a href="https://rutube.ru/channel/8968994" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">RuTube</a>
-                </div>
             </div>
         </div>
     </section>
@@ -320,7 +337,7 @@
                     </div>
                     <div class="col-md-4 text-md-end mt-3 mt-md-0">
                         <a href="rate.html" class="btn btn-warning btn-lg fw-bold">
-                            Хочу больше!
+                            Тарифы
                         </a>
                     </div>
                 </div>
@@ -338,15 +355,17 @@
                 <!-- YouTube -->
                 <div class="col-lg-4 col-md-6">
                     <div class="video-card text-center">
-                        <!-- Десктоп: iframe -->
+                        <!-- Десктоп: превью, iframe загружается по клику -->
                         <div class="d-none d-md-block">
-                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                            <div class="ratio ratio-16x9 rounded shadow-sm" data-video="https://www.youtube.com/embed/LsaKAyhOBzQ?autoplay=1">
+                                <button type="button" class="video-preview rounded" onclick="loadVideo(this)">
+                                    <i class="bi bi-play-circle-fill"></i>
+                                </button>
                                 <iframe
-                                    src="https://www.youtube.com/embed/LsaKAyhOBzQ"
                                     title="Видео на YouTube"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen
-                                    class="rounded">
+                                    class="rounded d-none">
                                 </iframe>
                             </div>
                         </div>
@@ -357,21 +376,23 @@
                             </a>
                         </div>
                         <!-- Капля-ссылка (только десктоп) -->
-                        <a href="https://www.youtube.com/@pznrsp" target="_blank" rel="noopener" class="video-drop drop-youtube d-none d-md-block">YouTube</a>
+                        <a href="https://www.youtube.com/@analizsmet" target="_blank" rel="noopener" class="video-drop drop-youtube d-none d-md-block">YouTube</a>
                     </div>
                 </div>
                 <!-- VK Видео -->
                 <div class="col-lg-4 col-md-6">
                     <div class="video-card text-center">
-                        <!-- Десктоп: iframe -->
+                        <!-- Десктоп: превью, iframe загружается по клику -->
                         <div class="d-none d-md-block">
-                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                            <div class="ratio ratio-16x9 rounded shadow-sm" data-video="https://vk.com/video_ext.php?oid=-205607454&id=456239039&hd=2&autoplay=1">
+                                <button type="button" class="video-preview rounded" onclick="loadVideo(this)">
+                                    <i class="bi bi-play-circle-fill"></i>
+                                </button>
                                 <iframe
-                                    src="https://vk.com/video_ext.php?oid=-205607454&id=456239039&hd=2"
                                     title="Видео ВКонтакте"
                                     allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock"
                                     allowfullscreen
-                                    class="rounded">
+                                    class="rounded d-none">
                                 </iframe>
                             </div>
                         </div>
@@ -388,15 +409,17 @@
                 <!-- Дзен -->
                 <div class="col-lg-4 col-md-6">
                     <div class="video-card text-center">
-                        <!-- Десктоп: iframe -->
+                        <!-- Десктоп: превью, iframe загружается по клику -->
                         <div class="d-none d-md-block">
-                            <div class="ratio ratio-16x9 rounded shadow-sm">
+                            <div class="ratio ratio-16x9 rounded shadow-sm" data-video="https://dzen.ru/embed/o4ka-v1wPAAA?from_block=partner&from=zen&mute=1&autoplay=1&tv=0">
+                                <button type="button" class="video-preview rounded" onclick="loadVideo(this)">
+                                    <i class="bi bi-play-circle-fill"></i>
+                                </button>
                                 <iframe
-                                    src="https://dzen.ru/embed/o4ka-v1wPAAA?from_block=partner&from=zen&mute=1&autoplay=0&tv=0"
                                     title="Видео на Дзен"
                                     allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media"
                                     allowfullscreen
-                                    class="rounded">
+                                    class="rounded d-none">
                                 </iframe>
                             </div>
                         </div>
@@ -407,7 +430,7 @@
                             </a>
                         </div>
                         <!-- Капля-ссылка (только десктоп) -->
-                        <a href="https://dzen.ru/pznrsp" target="_blank" rel="noopener" class="video-drop drop-dzen d-none d-md-block">Дзен</a>
+                        <a href="https://dzen.ru/analizsmet" target="_blank" rel="noopener" class="video-drop drop-dzen d-none d-md-block">Дзен</a>
                     </div>
                 </div>
             </div>
@@ -523,7 +546,7 @@
                     <div class="dl-step">
                         <span class="dl-step-num">1</span>
                         <div class="dl-step-text">
-                            <strong>Нажми на <a href="https://disk.yandex.ru/d/BluAT4XI5_vnaA" target="_blank" rel="noopener">ссылку</a>, перейдёшь на «Яндекс.Диск»</strong>
+                            <strong>Перейди на «Яндекс.Диск»</strong>
                             <div class="text-muted small">Скачай файл и зайди в папку «Загрузки».</div>
                         </div>
                     </div>
@@ -551,11 +574,13 @@
                     </div>
                 </div>
 
-                <div class="modal-footer">
-                    <a href="videos.html" class="btn btn-outline-primary" target="_blank" rel="noopener">
+                <div class="modal-footer d-flex gap-2">
+                    <a href="https://disk.yandex.ru/d/BluAT4XI5_vnaA" class="btn btn-primary fw-bold flex-fill" target="_blank" rel="noopener">
+                        <i class="bi bi-download"></i> Скачать с Яндекс.Диска
+                    </a>
+                    <a href="https://vkvideo.ru/video-205607454_456239040" class="btn btn-outline-primary flex-fill" target="_blank" rel="noopener">
                         <i class="bi bi-play-circle"></i> Видео-инструкция
                     </a>
-                    <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Понятно</button>
                 </div>
             </div>
         </div>
@@ -576,7 +601,7 @@
                     <div class="dl-step">
                         <span class="dl-step-num">1</span>
                         <div class="dl-step-text">
-                            <strong>Нажми на <a href="https://disk.yandex.ru/d/O8oR1Wb4upFbDg" target="_blank" rel="noopener">ссылку</a>, перейдёшь на «Яндекс.Диск»</strong>
+                            <strong>Перейди на «Яндекс.Диск»</strong>
                             <div class="text-muted small">Скачай файл и зайди в папку «Загрузки».</div>
                         </div>
                     </div>
@@ -625,11 +650,13 @@
                     </div>
                 </div>
 
-                <div class="modal-footer">
-                    <a href="videos.html" class="btn btn-outline-primary" target="_blank" rel="noopener">
+                <div class="modal-footer d-flex gap-2">
+                    <a href="https://disk.yandex.ru/d/O8oR1Wb4upFbDg" class="btn btn-primary fw-bold flex-fill" target="_blank" rel="noopener">
+                        <i class="bi bi-download"></i> Скачать с Яндекс.Диска
+                    </a>
+                    <a href="https://vkvideo.ru/video-205607454_456239040" class="btn btn-outline-primary flex-fill" target="_blank" rel="noopener">
                         <i class="bi bi-play-circle"></i> Видео-инструкция
                     </a>
-                    <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Понятно</button>
                 </div>
             </div>
         </div>
@@ -643,8 +670,8 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="p-3">
                         <i class="bi bi-pc-display-horizontal display-4 text-primary"></i>
-                        <h5 class="mt-3">Кроссплатформенность</h5>
-                        <p class="text-muted small">Работает на Windows и любых российских дистрибутивах Linux (Astra, Alt, RED OS и др.).</p>
+                        <h5 class="mt-3">Работает на российских ОС</h5>
+                        <p class="text-muted small">Astra Linux, RED OS, Alt Linux и другие. Оставайся эффективным, даже если вас перевели на импортозамещение.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -668,6 +695,22 @@
                         <p class="text-muted small">Обрабатывайте десятки смет пакетно. Заглядывайте в любую деталь расчета.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК СОЦСЕТЕЙ -->
+    <section class="hero-section text-center py-5">
+        <div class="container">
+            <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 1px;">Следите за обновлениями</p>
+            <div class="social-links-row">
+                <a href="https://t.me/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Telegram</a>
+                <a href="https://vk.com/pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК</a>
+                <a href="https://max.ru/channel_analizsmet" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">MAX</a>
+                <a href="https://dzen.ru/analizsmet" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Дзен</a>
+                <a href="https://www.youtube.com/@analizsmet" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">YouTube</a>
+                <a href="https://vkvideo.ru/@pznrsp" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">ВК Видео</a>
+                <a href="https://rutube.ru/channel/8968994" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">RuTube</a>
             </div>
         </div>
     </section>
@@ -706,6 +749,15 @@
                     btn.innerHTML = '<i class="bi bi-clipboard"></i>';
                 }, 2000);
             });
+        }
+
+        // Ленивая загрузка видео: iframe подставляется только по клику на превью.
+        function loadVideo(btn) {
+            var wrap = btn.closest('[data-video]');
+            wrap.querySelector('.video-preview').classList.add('d-none');
+            var frame = wrap.querySelector('iframe');
+            frame.src = wrap.getAttribute('data-video');
+            frame.classList.remove('d-none');
         }
     </script>
 </body>

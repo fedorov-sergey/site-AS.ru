@@ -133,7 +133,7 @@
         }
         .drop-youtube { background: linear-gradient(180deg, #FF0000 0%, #cc0000 100%); }
         .drop-vk      { background: linear-gradient(180deg, #4680C2 0%, #3668a0 100%); }
-        .drop-dzen    { background: linear-gradient(180deg, #333 0%, #1a1a1a 100%); }
+        .drop-rutube  { background: linear-gradient(180deg, #D0342C 0%, #a62822 100%); }
         .btn-platform {
             border-radius: 10px;
             font-weight: 600;
@@ -146,7 +146,7 @@
         }
         .btn-youtube { background: #FF0000; color: #fff; }
         .btn-vk      { background: #4680C2; color: #fff; }
-        .btn-dzen    { background: #1a1a1a; color: #fff; }
+        .btn-rutube  { background: #C0392B; color: #fff; }
 
         /* --- Превью видео (ленивая загрузка: iframe подставляется по клику) --- */
         .video-preview {
@@ -406,18 +406,18 @@
                         <a href="https://vkvideo.ru/@pznrsp" target="_blank" rel="noopener" class="video-drop drop-vk d-none d-md-block">ВК Видео</a>
                     </div>
                 </div>
-                <!-- Дзен -->
+                <!-- RuTube -->
                 <div class="col-lg-4 col-md-6">
                     <div class="video-card text-center">
                         <!-- Десктоп: превью, iframe загружается по клику -->
                         <div class="d-none d-md-block">
-                            <div class="ratio ratio-16x9 rounded shadow-sm" data-video="https://dzen.ru/embed/o4ka-v1wPAAA?from_block=partner&from=zen&mute=1&autoplay=1&tv=0">
+                            <div class="ratio ratio-16x9 rounded shadow-sm" data-video="https://rutube.ru/video/embed/6220fbc5fedf4d9a0795e3d93ca6e9d2/?autoplay=1">
                                 <button type="button" class="video-preview rounded" onclick="loadVideo(this)">
                                     <i class="bi bi-play-circle-fill"></i>
                                 </button>
                                 <iframe
-                                    title="Видео на Дзен"
-                                    allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media"
+                                    title="Видео на RuTube"
+                                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                                     allowfullscreen
                                     class="rounded d-none">
                                 </iframe>
@@ -425,12 +425,12 @@
                         </div>
                         <!-- Мобильное: кнопка -->
                         <div class="d-md-none">
-                            <a href="https://dzen.ru/video/watch/6a9dbd8b1a2349436987605b" target="_blank" rel="noopener" class="btn btn-platform btn-dzen btn-lg w-100 py-3 shadow-sm">
-                                <i class="bi bi-play-circle-fill"></i> Смотреть на Дзен
+                            <a href="https://rutube.ru/video/6220fbc5fedf4d9a0795e3d93ca6e9d2/" target="_blank" rel="noopener" class="btn btn-platform btn-rutube btn-lg w-100 py-3 shadow-sm">
+                                <i class="bi bi-play-circle-fill"></i> Смотреть на RuTube
                             </a>
                         </div>
                         <!-- Капля-ссылка (только десктоп) -->
-                        <a href="https://dzen.ru/analizsmet" target="_blank" rel="noopener" class="video-drop drop-dzen d-none d-md-block">Дзен</a>
+                        <a href="https://rutube.ru/channel/8968994" target="_blank" rel="noopener" class="video-drop drop-rutube d-none d-md-block">RuTube</a>
                     </div>
                 </div>
             </div>
